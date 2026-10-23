@@ -1,0 +1,2 @@
+import {sqliteTable,text} from 'drizzle-orm/sqlite-core';
+export const evidence=sqliteTable('evidence',{id:text('id').primaryKey(),name:text('name').notNull(),xHandle:text('x_handle').notNull(),sourceUrl:text('source_url').notNull(),excerpt:text('excerpt').notNull(),status:text('status').notNull(),publishedAt:text('published_at'),collectedAt:text('collected_at').notNull(),submittedBy:text('submitted_by').notNull()});

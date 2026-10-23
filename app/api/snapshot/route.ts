@@ -1,0 +1,2 @@
+import {boundedJson} from '@/lib/atlas';export const dynamic='force-dynamic';
+export async function GET(){try{const x=await boundedJson('https://bnb.fan/api/agent-id/snapshot');return Response.json({total:x.total,rate1m:x.rate1m,indexedTo:x.indexedTo,head:x.head,source:'bnb.fan',checkedAt:new Date().toISOString()},{headers:{'cache-control':'private, max-age=30'}});}catch{return Response.json({error:'参考站注册统计暂不可用',source:'bnb.fan'},{status:502});}}
