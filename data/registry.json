@@ -65,9 +65,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "wick676869.ai",
@@ -155,9 +155,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 3,
+    "tradeCount": 4,
     "buyCount": 2,
-    "sellCount": 1
+    "sellCount": 2
   },
   {
     "name": "ramensoup.ai",
@@ -205,9 +205,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 3,
-    "buyCount": 2,
-    "sellCount": 1
+    "tradeCount": 5,
+    "buyCount": 3,
+    "sellCount": 2
   },
   {
     "name": "pototo.ai",
@@ -245,9 +245,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "ju8.ai",
@@ -605,9 +605,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "oxfz.ai",
@@ -1532,7 +1532,10 @@
     "tx": "0x07a51f64a2767b5f78312c9e15450eb8a2df1180043647cabec442e1e75379ef",
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
-    "block": 129330771
+    "block": 129330771,
+    "tradeCount": 1,
+    "buyCount": 1,
+    "sellCount": 0
   },
   {
     "name": "coolwin.ai",
@@ -1541,7 +1544,10 @@
     "tx": "0x2a2c3612c50a460c2aaf2e861c76223327e1d1ebfdd69a8125d08238a6ef90df",
     "source": "bnb.fan + BSC RPC",
     "chainVerified": true,
-    "block": 129213787
+    "block": 129213787,
+    "tradeCount": 1,
+    "buyCount": 1,
+    "sellCount": 0
   },
   {
     "name": "cryptonakamoto.ai",
@@ -7498,7 +7504,10 @@
     "owner": "0xcab1d8e772eb86328b3f663e6bb3af0a875fae16",
     "block": 129330771,
     "source": "BSC ownerOf(name hash) · Grok source",
-    "chainVerified": true
+    "chainVerified": true,
+    "tradeCount": 1,
+    "buyCount": 1,
+    "sellCount": 0
   },
   {
     "name": "niosantos.ai",

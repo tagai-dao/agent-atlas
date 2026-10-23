@@ -67,7 +67,7 @@ npm run build
 
 ## Deployment handoff
 
-This repository preserves the existing Sites/Vinext application, including its UI, server routes, static activity assets and D1 schema. It is independent of the tagai-ui repository. No deployment is triggered by pushing this repository.
+This repository preserves the existing Sites/Vinext application, including its UI, server routes, static activity assets and D1 schema. It is independent of the tagai-ui repository. Pushes to main trigger the connected Cloudflare Workers Builds pipeline; verify the deployed domain after its check succeeds.
 
 `.openai/hosting.json` retains the existing public site's identity and DB binding. It is metadata, not a credential. Publishing to that existing site requires an authorized Sites session and its source synchronization workflow; a GitHub push alone does not update it. The latest data version (7) was saved, but its publish attempt returned `Unauthorized`.
 
@@ -121,11 +121,11 @@ Follow Sites skill helpers. `npm run dev` launches the local preview; `npm run d
 
 
 ## On-chain activity integration (2026-10-23)
-- The public directory merges `public/activity/agents.json` after loading. Large immutable data is served as static assets, avoiding bundling 24k+ identities or 39k+ NFT events into a Worker.
+- The server merges `public/activity/agents.json` with the identity directory. The browser receives paginated results and loads only the selected wallet history shard; the complete ledger remains in static assets.
 - `public/activity/manifest.json` records the BSC snapshot block, per-asset coverage and limitations. `feed.json` is limited to 200 recent events per asset. Complete wallet histories for the scanned contracts/pools are partitioned by the first address byte in `wallets/00.json` through `ff.json`.
 - AIPRO uses the token's curve trade event (topic `0x9adcf0ad0cda63c4d50f26a48925cf6405df27d422a39c456b5f03f661c82982`). Agentic Inu `.ai` uses `Buy(address,uint256,uint256)` and `Sell(address,uint256,uint256)`. GANG uses the manager's identified Buy/Sell topics filtered to the exact token address. Transfers alone are never treated as trades.
 - Flaip is the user-corrected curve/share contract `0xb8fb293b3e8e3c5fd741e34ac5810dd5dc9f2c7f`, not a normal ERC20. The original supplied address is its creator. `metadata()` identifies Flaip, `quoteToken()` identifies BNCB. Its Bought/Sold events represent curve shares, in 18-decimal units. The displayed quote is the event's value, not a normalized all-fees trade cost.
-- External activity uses Swap events from 6 pools discovered through DexScreener, with token0 independently read from each pool. Attribution uses transaction.from; relayed/AA transactions can be missed. Multi-hop swaps can produce multiple events. This does not claim coverage of every possible pool or intermediary.
+- External activity uses Swap events from discovered V2/V3 pools listed in the current manifest, with token0 and asset decimals independently read through Multicall3 at the same fixed block. Pancake V3 has two extra protocol-fee fields in its Swap signature; both Pancake and Uniswap V3 topics are scanned. Discovered unsupported pools are explicitly excluded in the manifest. Attribution uses transaction.from; relayed/AA transactions can be missed. Multi-hop swaps can produce multiple events. This does not claim coverage of every possible pool or intermediary.
 - Relic NFT contract `0xe8c6b38b5e63377a96b268319b66638f772254bb`, Game `0xb0d5f3108af164f5f7046f53ab59fd2779812d10`, deployment block 129129391: only Minted/MintedWithBnb events count. Recipient names are read with registry.handleOf, and each UTF-8 handle's keccak256 must match the mint event's handleHash. Public-sale totals reconcile to 95,000 NFTs and 39,214 mint events. Team allocation and ordinary NFT transfers are excluded.
 - Names are current registration snapshots, with the lookup block retained per identity. Historic token activity does not prove that the name was registered at transaction time. X evidence remains independent.
 - Research source/caches are in the workspace `outputs/agent-atlas/activity` directory, outside the deployed source. The normalized ledger retains transaction hashes and log indices. To regenerate reviewed static data: `python scripts/activity/normalize.py /absolute/path/to/activity-source`. Requires httpx/eth-abi/pycryptodome for collection and pycryptodome for normalization. The site is a fixed snapshot, with no unattended sync claimed.
@@ -134,3 +134,16 @@ Follow Sites skill helpers. `npm run dev` launches the local preview; `npm run d
 ## Grok local source import (2026-10-23)
 
 Read-only snapshot from the user-supplied Desktop agent-id-site/data/mappings_v2.json. Source reports 3,461 posts and 1,563 OCR images; these totals may overlap the previous research and are not added together. Accepted 1,732 rows, quarantined four invalid names, merged 86 existing pieces of evidence, adding 1,646. All new associations are candidates; original confidence is preserved separately. 1,712 distinct accepted names were independently checked via BSC registry ownerOf(keccak256(label)) at blocks 129229512–129229518; 1,666 registered. No wallet/X control proof is asserted. This is a static import; the hosted site does not call localhost.
+
+## Refresh on-chain snapshots
+
+Use the Python environment with httpx, eth-abi and pycryptodome installed:
+
+```sh
+python scripts/activity/refresh.py --source /absolute/path/to/previous-complete-raw --out /absolute/path/to/new-raw
+python scripts/activity/normalize.py /absolute/path/to/new-raw
+npm run check
+npm run build
+```
+
+The collector checks the previous block hash, anchors a new block with a 20-block buffer, increments logs, backfills Pancake V3, retrieves all swap senders, and rechecks every participant with fixed-block Multicall3 handleOf reads. It fails on missing required reads or senders and keeps the prior raw snapshot intact. Public RPCs are used by default; an optional server-only BSC_RPC_URL overrides them and is never written to outputs. Raw caches belong outside this repository. The normalizer updates legacy AIPRO directory counts from the same ledger so header, filters and details reconcile. Source discovery is bounded to supported V2/V3 pools; unsupported discovered pools remain disclosed. No wallet operation occurs.

@@ -1,7 +1,10 @@
 {
-  "updatedAt": "2026-10-22T23:31:24.513090+00:00",
-  "snapshotBlock": 129215977,
-  "snapshotTime": "2026-10-22T23:13:40+00:00",
+  "updatedAt": "2026-10-23T15:46:12.949806+00:00",
+  "snapshotBlock": 129345911,
+  "snapshotHash": "0x06d4261391210008eb6d735cf12f1c784aee50a0210dd7327023ad29f82aee5c",
+  "identitySnapshotBlock": 129345911,
+  "poolCount": 8,
+  "snapshotTime": "2026-10-23T15:28:27+00:00",
   "chainId": 56,
   "tokens": [
     {
@@ -10,17 +13,17 @@
       "status": "active",
       "internal": {
         "status": "indexed",
-        "events": 301,
-        "agentEvents": 244,
+        "events": 339,
+        "agentEvents": 276,
         "note": "按已识别的曲线成交事件统计"
       },
       "external": {
         "status": "indexed",
-        "events": 50,
-        "agentEvents": 1,
+        "events": 182,
+        "agentEvents": 5,
         "note": "已发现的 DEX 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 92
+      "agentWallets": 116
     },
     {
       "symbol": ".ai",
@@ -34,11 +37,11 @@
       },
       "external": {
         "status": "indexed",
-        "events": 56522,
-        "agentEvents": 407,
+        "events": 66244,
+        "agentEvents": 496,
         "note": "已发现的 DEX 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 150
+      "agentWallets": 173
     },
     {
       "symbol": "GANG",
@@ -52,11 +55,11 @@
       },
       "external": {
         "status": "indexed",
-        "events": 34800,
-        "agentEvents": 193,
+        "events": 53918,
+        "agentEvents": 970,
         "note": "已发现的 DEX 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 157
+      "agentWallets": 440
     },
     {
       "symbol": "Flaip",
@@ -64,8 +67,8 @@
       "status": "curve",
       "internal": {
         "status": "indexed",
-        "events": 340,
-        "agentEvents": 340,
+        "events": 368,
+        "agentEvents": 368,
         "note": "Bought / Sold 曲线份额；计价 BNCB"
       },
       "external": {
@@ -74,7 +77,7 @@
         "agentEvents": 0,
         "note": "未发现外部交易池，不等于零交易"
       },
-      "agentWallets": 128
+      "agentWallets": 132
     }
   ],
   "nft": {
@@ -85,20 +88,105 @@
     "mintEvents": 39214,
     "agentMinted": 95000,
     "agentMintEvents": 39214,
+    "agentMintTransactions": 39214,
     "agentWallets": 24444
   },
   "totals": {
-    "agentCount": 24573,
-    "tokenTrades": 1370,
+    "agentCount": 24731,
+    "tokenTrades": 2300,
     "nftMinted": 95000,
-    "nftMintEvents": 39214
+    "nftMintEvents": 39214,
+    "nftMintTransactions": 39214
   },
   "notes": [
-    "这是固定区块的历史快照，不是持续自动同步。代币内盘从 Agent ID 注册体系上线区块 128724651 扫描到快照区块；外盘覆盖本次发现的 6 个交易池，从各池建立时间开始。",
+    "这是固定区块的历史快照，不是持续自动同步。代币内盘从 Agent ID 注册体系上线区块 128724651 扫描到快照区块；外盘覆盖已发现并核验的 8 个 V2/V3 交易池，从各池建立时间或注册体系上线区块开始。",
     "交易按当前链上 handleOf(address) 归属回溯；不能保证交易发生时已注册该名称。地址与 X 账号的关联依然单独核验。",
     "内盘只识别确认的成交事件；外盘按 Swap 事件计数，聚合或多跳交易可能有多条 Swap。tx.from 由代付方或中继发起时可能遗漏实际用户，未确认的收币地址不推断为交易者。",
     "Relic 仅统计 Game 的 Minted / MintedWithBnb 事件，并核对 handleHash；不把 NFT 普通转账、二级买入或团队预留铸造计入公开铸造量。NFT 枚数与铸造交易次数分别展示。",
     "Flaip 使用用户更正的曲线合约地址，metadata() 确认为 Flaip，报价单位 BNCB；它不是普通 ERC20，尚未发现外部池。计价金额为事件记录值，不计作当前估值或利润。",
-    "外盘共读取 91372 条 Swap；交易详情未取到的事件 0 条，歧义事件 0 条。未收录不等于没有发生。"
+    "外盘共读取 120344 条 Swap；交易详情未取到的事件 0 条，歧义事件 0 条。未收录不等于没有发生。",
+    "发现但暂未纳入统计的池：metric 0xcbc0573dd27167ff755c697c32dbdc05f7309ac6（事件格式尚未支持）。不声称完整覆盖所有外盘。"
+  ],
+  "excludedPools": [
+    {
+      "address": "0xcbc0573dd27167ff755c697c32dbdc05f7309ac6",
+      "dex": "metric",
+      "reason": "unsupported pool event format"
+    }
+  ],
+  "walletsChecked": 34844,
+  "pools": [
+    {
+      "address": "0x9417dd70a63475820ba059434ffa0ea737df9f03",
+      "symbol": "GANG",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129345911,
+      "events": 380
+    },
+    {
+      "address": "0x2d0a9b6c2a2cd2fa5498ef7c38b25cb9d1927de6",
+      "symbol": "GANG",
+      "dex": "uniswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129345911,
+      "events": 239
+    },
+    {
+      "address": "0xe389955c5fc86a8f732cca458c3ffbe82935183e",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128936764,
+      "toBlock": 129345911,
+      "events": 2402
+    },
+    {
+      "address": "0xc19176f23ed3bf946e56abf0d9ec65da735516c7",
+      "symbol": "AIPRO",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129133110,
+      "toBlock": 129345911,
+      "events": 182
+    },
+    {
+      "address": "0x4492bfe221b5d7b2987511e329ca22d1d836e310",
+      "symbol": ".ai",
+      "dex": "uniswap",
+      "version": 2,
+      "fromBlock": 128849357,
+      "toBlock": 129345911,
+      "events": 680
+    },
+    {
+      "address": "0xcbc77d857d11d9a8407b6e580010540d885b0b40",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 128794695,
+      "toBlock": 129345911,
+      "events": 60881
+    },
+    {
+      "address": "0x0bd5ded695d61c2db15c703c345d57e039fd0b6d",
+      "symbol": "GANG",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129109853,
+      "toBlock": 129345911,
+      "events": 53299
+    },
+    {
+      "address": "0x4206466fc95b35d92fc2440c5253a85f5448520e",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 129054493,
+      "toBlock": 129345911,
+      "events": 2281
+    }
   ]
 }
