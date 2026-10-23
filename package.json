@@ -14,7 +14,8 @@
     "deploy": "npm run build && wrangler deploy --config dist/server/wrangler.json",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "check": "node --test tests/*.test.mjs && node scripts/check-data.mjs && node scripts/check-activity.mjs && tsc --noEmit"
+    "check": "node --test tests/*.test.mjs && node scripts/check-data.mjs && node scripts/check-activity.mjs && tsc --noEmit",
+    "deploy:cloudflare": "wrangler deploy --config wrangler.production.jsonc --keep-vars"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

@@ -1,3 +1,15 @@
+## Production Cloudflare deployment
+
+The existing custom domain `agent-id.tagai.fun` belongs to Worker `agent-atlas` in account `02c3e74d8f918b08e740f9cfcd4ea23d`. `wrangler.production.jsonc` preserves its D1 binding `agent-atlas-db`, disabled workers.dev/preview URLs and the existing custom domain. OAuth/API credentials and optional RPC endpoints remain outside Git.
+
+```sh
+npm run check
+npm run build
+npm run deploy:cloudflare
+```
+
+The deploy command preserves dashboard variables and existing secrets. Run it only after a successful build in an authorized environment. It updates the existing Worker; no database migration is needed for the read-only application. After deployment, verify `/api/agents?size=1`, `/api/directory`, `/api/resolve?q=tagai.ai` and the homepage. A failed deployment must retain its pending commit for retry.
+
 ## Performance and read-only deployment update
 
 - `/api/agents` provides server-side directory/activity filtering and pagination (10–20 rows per screen, maximum 100). Full filtered CSV export is an explicit download, not a prerequisite for rendering.
@@ -18,7 +30,7 @@ npm run build
 
 The importer preserves reviewed evidence, applies source removals and confidence changes, and verifies names via Multicall3 at one fixed BSC block. The optional `BSC_RPC_URL` environment variable is also supported for this local import. `.sync-state/` stores non-secret fingerprints and audit results locally; it is excluded from Git. Check all generated changes before committing and pushing. GitHub Actions validates changes but does not deploy them until the site's actual hosting integration is configured. A GitHub push is not proof that `agent-id.tagai.fun` has updated.
 
-The Codex six-hour task targets this repository and new domain. Direct Cloudflare publishing currently needs restored authentication and the verified hosting project configuration. Until then, changes can be committed/pushed and reported as awaiting deployment; never silently publish to the old Sites domain instead.
+The Codex six-hour task targets this repository and new domain. The new Cloudflare target is now verified; deploy through `npm run deploy:cloudflare` after validation. If OAuth expires or a publish fails, keep the pending commit and report the exact blocker; never silently publish to the old Sites domain instead.
 
 # Agent ID ATLAS
 
