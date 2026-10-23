@@ -59,7 +59,19 @@ This repository preserves the existing Sites/Vinext application, including its U
 
 `.openai/hosting.json` retains the existing public site's identity and DB binding. It is metadata, not a credential. Publishing to that existing site requires an authorized Sites session and its source synchronization workflow; a GitHub push alone does not update it. The latest data version (7) was saved, but its publish attempt returned `Unauthorized`.
 
-For separate infrastructure, engineers must configure their own Worker/D1 bindings, migrations, hostname and production authentication. The current local mock identity must not be used as production authentication. Sites identity and connector integration are platform-specific; the repository is not presented as a ready-to-deploy generic Docker service. The existing `tagai-ui` PR #209 contains a separate Node/Vite deployment adaptation if that architecture is preferred: https://github.com/tagai-dao/tagai-ui/pull/209 .
+The independent Cloudflare deployment is available at https://agent-id.tagai.fun/. `wrangler.jsonc` is the source of truth for its Worker, custom domain and observability settings. It runs in public read-only mode: the directory, search and activity data are available, while evidence writes are rejected server-side because ChatGPT Sites identity headers are not a valid authentication boundary on a directly exposed Worker. Add a production identity provider before restoring writes.
+
+Deploy updates with Node.js 22.13 or newer:
+
+```sh
+npm ci --ignore-scripts
+node scripts/check-data.mjs
+node scripts/check-activity.mjs
+npx tsc --noEmit
+npm run deploy
+```
+
+The current local mock identity must not be used as production authentication. Sites identity and connector integration are platform-specific; the repository is not presented as a ready-to-deploy generic Docker service. The existing `tagai-ui` PR #209 contains a separate Node/Vite deployment adaptation if that architecture is preferred: https://github.com/tagai-dao/tagai-ui/pull/209 .
 
 ## Synchronization
 
