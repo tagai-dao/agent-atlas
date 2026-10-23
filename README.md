@@ -1,3 +1,25 @@
+## Performance and read-only deployment update
+
+- `/api/agents` provides server-side directory/activity filtering and pagination (10–20 rows per screen, maximum 100). Full filtered CSV export is an explicit download, not a prerequisite for rendering.
+- `/api/activity` returns only the 20 matching recent events; statistics render immediately from the small manifest. Wallet details load only the selected address bucket. Browser requests timeout after 15 seconds and show retry actions.
+- Public evidence submission is disabled in both UI and API. This deployment does not rely on Sites authentication or D1 writes.
+- X and transaction/NFT snapshot times are displayed separately in Beijing time. Snapshot dates are not claims of continuous chain indexing.
+- Optional NodeReal BSC endpoint: configure **server secret** `BSC_RPC_URL` in the deployment platform. Never use a `NEXT_PUBLIC_`/`VITE_` variable or commit an endpoint containing a key. No paid provider is required; public BSC fallbacks remain. Live RPC verification returns the actual block read instead of the older directory block.
+
+### Six-hour desktop data synchronization
+
+Install Python dependencies in a virtual environment: `httpx`, `eth-abi`, `pycryptodome`. Run:
+
+```sh
+python scripts/import-local.py --source /absolute/path/to/agent-id-site/data/mappings_v2.json
+npm run check
+npm run build
+```
+
+The importer preserves reviewed evidence, applies source removals and confidence changes, and verifies names via Multicall3 at one fixed BSC block. The optional `BSC_RPC_URL` environment variable is also supported for this local import. `.sync-state/` stores non-secret fingerprints and audit results locally; it is excluded from Git. Check all generated changes before committing and pushing. GitHub Actions validates changes but does not deploy them until the site's actual hosting integration is configured. A GitHub push is not proof that `agent-id.tagai.fun` has updated.
+
+The Codex six-hour task targets this repository and new domain. Direct Cloudflare publishing currently needs restored authentication and the verified hosting project configuration. Until then, changes can be committed/pushed and reported as awaiting deployment; never silently publish to the old Sites domain instead.
+
 # Agent ID ATLAS
 
 Agent ID directory, public X association evidence, BSC token trading activity and Relic NFT mint activity.
@@ -24,10 +46,10 @@ npm run build
 
 ## Current data
 
-- X source snapshot: 2026-10-23T07:33:38.842Z (15:33 Beijing time).
-- 1,944 evidence records across 1,896 names; 1,935 chain-checked directory records.
-- Latest local-source import accepted 1,852 rows and quarantined 12 malformed or known false OCR matches.
-- Chain ownership checks for the latest import use fixed BSC block 129288331.
+- X source snapshot: 2026-10-23T12:10:55.934Z (20:10 Beijing time).
+- 2,020 evidence records across 1,970 names; 2,010 chain-checked directory records.
+- Latest local-source import accepted 1,928 rows and quarantined 12 malformed or known false OCR matches.
+- Chain ownership checks for the latest import use fixed BSC block 129330771.
 - X association evidence does not prove wallet control; new associations remain candidates, preserving source confidence.
 - Token and NFT data have their own snapshot dates and coverage boundaries in `public/activity/manifest.json`.
 

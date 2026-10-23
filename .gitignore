@@ -1,5 +1,5 @@
 # Dependencies
-/node_modules/
+/node_modules
 /.pnp
 .pnp.*
 # Keep authored Yarn tooling if the project adopts Yarn.
@@ -43,3 +43,9 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Local synchronization state
+/.sync-state/
+
+__pycache__/
+*.pyc

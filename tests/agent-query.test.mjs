@@ -1,0 +1,16 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {queryAgents} from '../lib/agent-query.mjs';
+const activity=JSON.parse(fs.readFileSync('public/activity/agents.json'));
+const registry=JSON.parse(fs.readFileSync('data/registry.json'));
+const evidence=JSON.parse(fs.readFileSync('data/evidence.json'));
+const map=new Map(registry.map(a=>[a.name,a]));for(const a of activity)map.set(a.name,{...map.get(a.name),...a});
+const agents=[...map.values()],query=p=>queryAgents(agents,evidence,new URLSearchParams(p));
+test('pages cover every activity identity without overlap',()=>{const first=query({mode:'activity',size:'100'});const names=[];for(let page=1;page<=first.pages;page++)names.push(...query({mode:'activity',size:'100',page:String(page)}).items.map(a=>a.name));assert.equal(names.length,activity.length);assert.equal(new Set(names).size,activity.length);});
+test('X search finds its agent on the full server index',()=>{const result=query({q:'@TagAIDAO'});assert.ok(result.items.some(a=>a.name==='tagai.ai'));});
+test('NFT-only participants cannot leak into a sell filter',()=>{for(const a of query({mode:'activity',asset:'Relic NFT',direction:'仅卖出'}).items)assert.fail(a.name);});
+test('external buy filter checks external buys rather than total trades',()=>{const result=query({mode:'activity',asset:'.ai',market:'外盘',direction:'仅买入',size:'100'});assert.ok(result.total>0);for(const a of result.items)assert.ok(a.activity.tokens.some(t=>t.symbol==='.ai'&&t.outerBuys>0));});
+test('CSV exports the complete filtered set, not just its first page',()=>{const all=query({mode:'activity',asset:'Relic NFT',format:'csv'});assert.equal(all.items.length,all.total);assert.ok(all.total>100);});
+test('oversized page is clamped and large size is bounded',()=>{const result=query({mode:'activity',page:'999999',size:'99999'});assert.equal(result.page,result.pages);assert.ok(result.items.length<=100);});
+test('normal response remains small',()=>{const result=query({mode:'activity',size:'20'});assert.ok(Buffer.byteLength(JSON.stringify(result))<25000);});
