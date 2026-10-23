@@ -3,7 +3,9 @@
   "name": "agent-atlas",
   "main": "./worker/index.ts",
   "compatibility_date": "2026-10-23",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "workers_dev": false,
   "routes": [
     {
@@ -17,5 +19,14 @@
       "enabled": true,
       "head_sampling_rate": 1
     }
-  }
+  },
+  "account_id": "02c3e74d8f918b08e740f9cfcd4ea23d",
+  "preview_urls": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "agent-atlas-db",
+      "database_id": "8aaf3b42-3e7d-4647-aed4-dddf72d6bb2b"
+    }
+  ]
 }

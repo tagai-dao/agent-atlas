@@ -1,6 +1,6 @@
 ## Production Cloudflare deployment
 
-The existing custom domain `agent-id.tagai.fun` belongs to Worker `agent-atlas` in account `02c3e74d8f918b08e740f9cfcd4ea23d`. `wrangler.production.jsonc` preserves its D1 binding `agent-atlas-db`, disabled workers.dev/preview URLs and the existing custom domain. OAuth/API credentials and optional RPC endpoints remain outside Git.
+The existing custom domain `agent-id.tagai.fun` belongs to Worker `agent-atlas` in account `02c3e74d8f918b08e740f9cfcd4ea23d`. `wrangler.jsonc` preserves its D1 binding `agent-atlas-db`, disabled workers.dev/preview URLs and the existing custom domain. OAuth/API credentials and optional RPC endpoints remain outside Git.
 
 ```sh
 npm run check
