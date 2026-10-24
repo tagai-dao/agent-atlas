@@ -17,6 +17,7 @@ from eth_abi import encode, decode
 from Crypto.Hash import keccak
 from flap import discover, FACTORY, PORTAL, ZERO, WBNB, call, FLAP_BUY, FLAP_SELL
 from assets import LEGACY
+from transactions import fetch_senders
 
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--source', type=Path, required=True)
@@ -244,26 +245,16 @@ for txhash in hashes:
     if not destination.exists(): pending.append(txhash)
 print({'transactionSendersRequired':len(pending)},flush=True)
 def fetch_tx(chunk):
-    # JSON-RPC batching is used only for transaction retrieval, never eth_call.
-    missing=set(chunk)
-    for attempt in range(5):
-        try:
-            endpoint=rpc_url if os.environ.get('BSC_RPC_URL') else 'https://bsc-dataseed1.defibit.io'
-            response=client.post(endpoint,json=[{'jsonrpc':'2.0','id':h,'method':'eth_getTransactionByHash','params':[h]} for h in missing])
-            response.raise_for_status()
-            results=response.json()
-            assert isinstance(results,list)
-            for row in results:
-                transaction=row.get('result');txhash=row.get('id')
-                if txhash not in missing or not transaction or not transaction.get('from'): continue
-                save(out/'txs'/(txhash+'.json'),{'from':transaction['from'].lower(),'to':(transaction.get('to') or '').lower(),'block':int(transaction['blockNumber'],16)})
-                missing.remove(txhash)
-            if not missing:return
-        except Exception: pass
-        time.sleep(attempt+1)
-    raise RuntimeError(f'Missing transaction senders: {len(missing)}')
-with futures.ThreadPoolExecutor(max_workers=4) as executor:
-    chunks=[pending[i:i+50] for i in range(0,len(pending),50)]
+    # Smaller numeric-ID batches avoid brittle provider batching. Immutable
+    # transaction metadata may fall back to the previously verified public RPC;
+    # all contract reads still use fixed-block Multicall3 without fallback here.
+    public='https://bsc-dataseed1.defibit.io'
+    endpoints=[rpc_url,public] if os.environ.get('BSC_RPC_URL') else [public]
+    def post(endpoint,payload):
+        response=client.post(endpoint,json=payload);response.raise_for_status();return response.json()
+    fetch_senders(chunk,head,endpoints,post,lambda h,value:save(out/'txs'/(h+'.json'),value))
+with futures.ThreadPoolExecutor(max_workers=2) as executor:
+    chunks=[pending[i:i+20] for i in range(0,len(pending),20)]
     for i,_ in enumerate(executor.map(fetch_tx,chunks)):
         if i%20==0: print({'transactionBatches':i,'total':len(chunks)},flush=True)
 

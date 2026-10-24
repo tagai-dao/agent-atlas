@@ -240,3 +240,5 @@ trade/NFT automation also refreshes holdings, verifies public shards and advance
 `.sync-state/holdings-source.json` only after a proven successful deployment.
 
 Local RPC configuration may be selected with `--rpc-env-file /absolute/secure/file --rpc-env-name VARIABLE_NAME`; this reads only that variable and never executes the environment file. Do not place its value in command arguments or logs.
+
+Transaction sender retrieval uses small numeric-ID batches with bounded retries and validates each returned transaction hash and mined block. Only unresolved hashes are retried; read-only transaction metadata can fall back to the previously verified public RPC. This fallback never performs contract reads, signing, or transactions; fixed-block Multicall3 remains mandatory for contract state.
