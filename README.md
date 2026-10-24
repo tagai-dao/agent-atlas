@@ -195,3 +195,48 @@ python -m pip install -r scripts/activity/requirements.txt
 python -m unittest discover -s tests -p 'test_*.py'
 npm run check
 ```
+
+## Current holdings for every registered BSC .ai
+
+The independent **资产持仓** page (`/?view=holdings`) covers all current registry
+owners, including those absent from the trading/NFT participation directory.
+`scripts/holdings/refresh.py` replays all ERC721 Transfer events from the actual
+registry deployment block **127950748** (earlier than the reference site's first
+claim), applies transfers/burns, verifies each `handleOf`, name hash and `ownerOf`,
+and reads BNB plus asset `balanceOf` through Multicall3 at one anchored block.
+Required read failures abort publication; omitted covered positions mean an
+actually queried zero, while uncovered assets never mean zero. BNB is read with
+Multicall3 `getEthBalance`, not an independently timed RPC balance request.
+
+Asset coverage is deliberately explicit: BNB, actual ERC20 contracts from the
+activity manifest, and current Relic ERC721 balances. This is **not** discovery
+of every token/NFT in a wallet, other chains, unclaimed curve shares, staking or
+LP positions. NFT current balance includes transfers and is separate from mint
+history. No price, profit, or value estimate is inferred. Dynamic tracking adds
+new eligible token contracts on subsequent collection runs. NodeReal's
+`nr_getTokenHoldings` / `nr_getNFTHoldings` are optional future asset-discovery
+sources; do not label a fixed contract list as a complete wallet inventory.
+
+Use the existing Python environment/dependencies:
+
+```sh
+python scripts/holdings/refresh.py --out /absolute/new/raw-directory
+# Subsequent runs may add --source /absolute/last-verified/raw-directory
+python scripts/holdings/normalize.py /absolute/new/raw-directory
+python -m unittest discover -s tests -p 'test_*.py'
+npm run check
+npm run build
+```
+
+The public manifest (`/holdings/manifest.json`, also `/api/holdings` and `/api/directory.holdings`) includes exact asset contracts, decimals, totals, holder
+counts, snapshot time/hash and identity/asset coverage. Wallets and hashed-name
+lookups use 256 static shards, holder tables use small sorted pages, and a CSV
+contains raw integers alongside exact decimal strings. This keeps the full
+~90k-wallet snapshot out of the Worker/client JavaScript bundles. Every shard
+carries its block; clients reject mixed deployments. Large values retain integer
+precision. Raw logs/caches and credentials remain outside Git; configure
+`BSC_RPC_URL` only in a secure local/server environment. The existing two-hour
+trade/NFT automation also refreshes holdings, verifies public shards and advances
+`.sync-state/holdings-source.json` only after a proven successful deployment.
+
+Local RPC configuration may be selected with `--rpc-env-file /absolute/secure/file --rpc-env-name VARIABLE_NAME`; this reads only that variable and never executes the environment file. Do not place its value in command arguments or logs.
