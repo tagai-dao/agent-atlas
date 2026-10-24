@@ -15,6 +15,8 @@ import time
 import httpx
 from eth_abi import encode, decode
 from Crypto.Hash import keccak
+from flap import discover, FACTORY, PORTAL, ZERO, WBNB, call, FLAP_BUY, FLAP_SELL
+from assets import LEGACY
 
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--source', type=Path, required=True)
@@ -26,6 +28,7 @@ out.mkdir(parents=True, exist_ok=True)
 (out/'logs').mkdir(exist_ok=True)
 (out/'txs').mkdir(exist_ok=True)
 (out/'handles').mkdir(exist_ok=True)
+(out/'receipts').mkdir(exist_ok=True)
 client = httpx.Client(timeout=60)
 rpc_url = os.environ.get('BSC_RPC_URL') or 'https://rpc-bsc.48.club'
 registry = '0x60b9262456de011f7d15a54cdd8c48baaa8b022f'
@@ -40,7 +43,7 @@ def topic(signature): return '0x'+keccak.new(digest_bits=256, data=signature.enc
 def rpc(method, params):
     for attempt in range(5):
         try:
-            endpoint = rpc_url if os.environ.get('BSC_RPC_URL') or method!='eth_call' else 'https://bsc-mainnet.public.blastapi.io'
+            endpoint = rpc_url if os.environ.get('BSC_RPC_URL') else 'https://bsc-mainnet.public.blastapi.io' if method=='eth_call' else 'https://bsc-dataseed1.defibit.io' if method=='eth_getTransactionReceipt' else rpc_url
             response = client.post(endpoint, json={'jsonrpc':'2.0','id':1,'method':method,'params':params})
             response.raise_for_status()
             data = response.json()
@@ -78,10 +81,48 @@ def fetch_logs(spec):
     if path.exists(): return read(path)
     params = {'address':address,'fromBlock':hex(lo),'toBlock':hex(hi)}
     if topics is not None: params['topics'] = topics
-    rows = rpc('eth_getLogs', [params])
+    try:
+        rows = rpc('eth_getLogs', [params])
+    except RuntimeError:
+        if hi-lo<64:raise
+        midpoint=(lo+hi)//2
+        rows=fetch_logs((label,address,topics,lo,midpoint))+fetch_logs((label,address,topics,midpoint+1,hi))
+    if len(rows)>=10000 and lo<hi:
+        midpoint=(lo+hi)//2
+        rows=fetch_logs((label,address,topics,lo,midpoint))+fetch_logs((label,address,topics,midpoint+1,hi))
     assert all(not r.get('removed') and lo <= int(r['blockNumber'],16) <= hi for r in rows)
     save(path, rows)
     return rows
+
+def scan(label,address,topics,start):
+    with futures.ThreadPoolExecutor(max_workers=4) as executor:
+        batches=executor.map(fetch_logs,[(label,address,topics,lo,min(lo+4999,head)) for lo in range(start,head+1,5000)])
+        return [row for batch in batches for row in batch]
+
+catalog=discover(multicall,head)
+save(out/'flap-discovery.json',catalog)
+assets={a['address']:a for a in (read(src/'tracked-assets.json') if (src/'tracked-assets.json').exists() else LEGACY)}
+eligible=[a for a in catalog['tokens'] if a['eligible']]
+assert all(a['address'] in {r['address'] for r in eligible} for a in assets.values() if a.get('protocol')=='flap-id-agent-curve'), 'Previously tracked Flap token disappeared from verified inventory'
+quote_addresses=sorted({a['quoteToken'] for a in eligible if a['quoteToken']!=ZERO})
+quote_values=multicall([call(a,method) for a in quote_addresses for method in ('symbol()','decimals()')]) if quote_addresses else []
+quotes={ZERO:{'symbol':'BNB','decimals':18}}
+for i,a in enumerate(quote_addresses):quotes[a]={'symbol':decode(['string'],quote_values[i*2])[0],'decimals':decode(['uint8'],quote_values[i*2+1])[0]}
+for a in eligible:
+    assets[a['address']]={**a,'quoteSymbol':quotes[a['quoteToken']]['symbol'],'quoteDecimals':quotes[a['quoteToken']]['decimals']}
+save(out/'tracked-assets.json',list(assets.values()))
+eligible=[assets[a['address']] for a in eligible]
+print({'flapMarkets':catalog['marketCount'],'flapDexTokens':len(eligible)},flush=True)
+
+# Factory creation logs anchor historical coverage to each market's creation.
+factory_cached=out/'flap-factory-source.json'
+factory_old=read(factory_cached) if factory_cached.exists() else read(src/'flap-factory-source.json') if (src/'flap-factory-source.json').exists() else {'head':128724650,'logs':[]}
+assert factory_old['head']<=head
+factory_rows=factory_old['logs']+scan('flap-factory',FACTORY,[topic('MarketCreated(address,address,address,address,bytes32)')],factory_old['head']+1)
+factory_rows=list({(r['transactionHash'],r['logIndex']):r for r in factory_rows}.values())
+save(out/'flap-factory-source.json',{'head':head,'complete':True,'logs':factory_rows})
+births={'0x'+r['topics'][2][-40:]:int(r['blockNumber'],16) for r in factory_rows}
+assert len(births)==catalog['marketCount'], 'Incomplete factory creation history'
 
 sources = []
 for file in src.glob('*.json'):
@@ -90,6 +131,28 @@ for file in src.glob('*.json'):
         if not isinstance(data,dict) or 'logs' not in data: continue
         assert data['complete'] and data['head']==old_block['number'], f'Incomplete source: {file.name}'
         sources.append((file.name, data))
+
+existing={name for name,_ in sources}
+shared=topic('FlapSharedIndexerLog(bytes32,uint256,address,address,uint256,uint256)')
+for a in eligible:
+    assert a['market'] in births, 'Missing Flap market creation log'
+    start=births[a['market']]
+    for kind,address,topics in [('flap-agent',a['market'],[shared]),('flap-portal',PORTAL,[[topic(FLAP_BUY),topic(FLAP_SELL)]])]:
+        name=f"inner-{kind}-{a['address']}.json"
+        if name not in existing:sources.append((name,{'head':start-1,'fromBlock':start,'complete':True,'logs':[],'address':address,'token':a['address'],'symbol':a['symbol'],'format':kind,'topics':topics}))
+
+# The Portal's canonical DEX pool is authoritative even before third-party indexing.
+for a in eligible:
+    if any(d.get('pool',{}).get('pairAddress','').lower()==a['pool'] and d.get('token')==a['address'] for _,d in sources):continue
+    values=multicall([call(a['pool'],'token0()'),call(a['pool'],'token1()')])
+    token0,token1=[decode(['address'],value)[0].lower() for value in values]
+    quote=WBNB if a['quoteToken']==ZERO else a['quoteToken']
+    assert {token0,token1}=={a['address'],quote}, 'Flap canonical pool token mismatch'
+    probes=multicall([call(a['pool'],'getReserves()'),call(a['pool'],'slot0()')],optional=True)
+    version=2 if probes[0][0] and len(probes[0][1])==96 else 3 if probes[1][0] and len(probes[1][1])>=224 else None
+    assert version, 'Unsupported canonical Flap DEX pool'
+    pool={'pairAddress':a['pool'],'dexId':'pancakeswap','chainId':'bsc','labels':['v'+str(version)],'baseToken':{'address':a['address'],'symbol':a['symbol']},'quoteToken':{'address':quote,'symbol':'WBNB' if a['quoteToken']==ZERO else a['quoteSymbol']}}
+    sources.append((f"pool-{a['pool']}-{a['address']}.json",{'head':births[a['market']]-1,'fromBlock':births[a['market']],'complete':True,'pool':pool,'symbol':a['symbol'],'token':a['address'],'version':version,'logs':[]}))
 
 # Refresh pool discovery, retaining previously discovered pools even if delisted.
 pools = {d['pool']['pairAddress'].lower() for _,d in sources if 'pool' in d}
@@ -104,7 +167,7 @@ for token,symbol in tokens.items():
     discovery.extend(rows)
     for pool in rows:
         address = pool['pairAddress'].lower()
-        if address in pools: continue
+        if any(d.get('pool',{}).get('pairAddress','').lower()==address and d.get('token','').lower()==token.lower() for _,d in sources):continue
         if pool['chainId']!='bsc' or pool['dexId'] not in ('pancakeswap','uniswap'):
             excluded.append({'address':address,'dex':pool['dexId'],'reason':'unsupported pool event format'})
             continue
@@ -117,8 +180,9 @@ for token,symbol in tokens.items():
             elif probes[1][0] and len(probes[1][1])>=224: version=3
             else: raise RuntimeError(f'Unrecognized new pool version: {address}')
         # Scan from the registry launch; no reliance on approximate creation timestamps.
-        data = {'head':128724650,'fromBlock':128724651,'complete':True,'pool':pool,'symbol':symbol,'token':token,'version':version,'logs':[]}
-        sources.append((f'pool-{address}.json',data))
+        start=births[assets[token.lower()]['market']] if assets[token.lower()].get('protocol')=='flap-id-agent-curve' else 128724651
+        data = {'head':start-1,'fromBlock':start,'complete':True,'pool':pool,'symbol':symbol,'token':token,'version':version,'logs':[]}
+        sources.append((f'pool-{address}-{token.lower()}.json',data))
         pools.add(address)
 save(out/'pool-discovery.json', discovery)
 save(out/'excluded-pools.json', excluded)
@@ -141,8 +205,26 @@ for name,data in sources:
     else: address=data['address'];topics=data.get('topics')
     tasks=[(name+('-v3-backfill' if backfill_v3 else ''),address,topics,lo,min(lo+4999,head)) for lo in range(data['head']+1,head+1,5000)]
     rows=list(data['logs'])
-    with futures.ThreadPoolExecutor(max_workers=4) as executor:
-        for batch in executor.map(fetch_logs,tasks): rows.extend(batch)
+    if data.get('format')=='flap-portal':
+        # Transfers only identify candidate receipts. Only actual Portal fill
+        # events are emitted into the ledger; claims/transfers are not trades.
+        transfer=topic('Transfer(address,address,uint256)');portal_topic='0x'+PORTAL[2:].zfill(64)
+        candidates=scan(name+'-from',data['token'],[transfer,portal_topic],data['head']+1)+scan(name+'-to',data['token'],[transfer,None,portal_topic],data['head']+1)
+        hashes=sorted({r['transactionHash'] for r in candidates})
+        def receipt(txhash):
+            path=out/'receipts'/(txhash+'.json');previous=src/'receipts'/(txhash+'.json')
+            if not path.exists() and previous.exists():shutil.copyfile(previous,path)
+            if path.exists():return read(path)
+            r=rpc('eth_getTransactionReceipt',[txhash]);assert r and r.get('status')=='0x1';save(path,r);return r
+        with futures.ThreadPoolExecutor(max_workers=6) as executor:
+            for r in executor.map(receipt,hashes):
+                asset_pools={d['pool']['pairAddress'].lower() for _,d in sources if 'pool' in d and d['token'].lower()==data['token'].lower()}
+                dex=any(l['address'].lower() in asset_pools and l['topics'] and l['topics'][0] in {topic('Swap(address,uint256,uint256,uint256,uint256,address)'),topic('Swap(address,address,int256,int256,uint160,uint128,int24)'),topic('Swap(address,address,int256,int256,uint160,uint128,int24,uint128,uint128)')} for l in r['logs'])
+                for l in r['logs']:
+                    if not dex and l['address'].lower()==PORTAL and l['topics'] and l['topics'][0] in data['topics'][0] and '0x'+l['data'][90:130].lower()==data['token']:rows.append(l)
+    else:
+        with futures.ThreadPoolExecutor(max_workers=4) as executor:
+            for batch in executor.map(fetch_logs,tasks): rows.extend(batch)
     rows=list({(r['transactionHash'],r['logIndex']):r for r in rows}.values())
     rows.sort(key=lambda r:(int(r['blockNumber'],16),int(r['logIndex'],16)))
     data={**data,'head':head,'logs':rows}
@@ -153,7 +235,7 @@ for name,data in sources:
     print({'source':name,'events':len(rows)},flush=True)
 
 # Fetch transaction senders (not contract calls); immutable caches may be reused.
-hashes={r['transactionHash'] for _,d in sources if 'pool' in d for r in read(out/f"pool-{d['pool']['pairAddress'].lower()}.json")['logs']}
+hashes={r['transactionHash'] for name,d in sources if 'pool' in d for r in read(out/name)['logs']}
 pending=[]
 for txhash in hashes:
     previous=src/'txs'/(txhash+'.json');destination=out/'txs'/(txhash+'.json')
@@ -190,7 +272,12 @@ for name,_ in sources:
     data=read(out/name)
     if 'pool' in data: continue
     index=2 if data.get('format')=='manager' else 1
-    addresses.update('0x'+r['topics'][index][-40:].lower() for r in data['logs'])
+    if data.get('format') in ('flap-agent','flap-portal'):
+        for r in data['logs']:
+            words=[r['data'][i:i+64] for i in range(2,len(r['data']),64)]
+            if data['format']=='flap-agent' and bytes.fromhex(words[0]).rstrip(b'\0') not in (b'virtualBuyFill',b'virtualSellFill'):continue
+            addresses.add('0x'+words[2][-40:].lower())
+    else:addresses.update('0x'+r['topics'][index][-40:].lower() for r in data['logs'])
 addresses.update(read(out/'txs'/(h+'.json'))['from'] for h in hashes)
 addresses=sorted(addresses)
 def handles(chunk):
@@ -220,7 +307,7 @@ for _,d in sources:
 save(out/'pool-token0.json',{a:pair[0] for a,pair in verified_pools.items()})
 token_addresses=sorted({d['token'].lower() for _,d in sources if 'pool' in d}|{p[k]['address'].lower() for p in discovery for k in ('baseToken','quoteToken')})
 decimals=multicall([(a,bytes.fromhex('313ce567')) for a in token_addresses])
-assert all(decode(['uint8'],v)[0]==18 for v in decimals), 'Normalizer requires verified 18-decimal assets'
+save(out/'token-decimals.json',{a:decode(['uint8'],v)[0] for a,v in zip(token_addresses,decimals)})
 assert rpc('eth_getBlockByNumber',[hex(head),False])['hash']==anchor['hash'], 'Snapshot reorganization detected'
 save(out/'refresh-complete.json',{'block':head,'hash':anchor['hash'],'walletsChecked':len(wallets),'poolCount':len(pools)})
 print({'complete':True,'block':head,'walletsChecked':len(wallets),'registered':sum(bool(w['handle']) for w in wallets)},flush=True)

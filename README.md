@@ -147,3 +147,51 @@ npm run build
 ```
 
 The collector checks the previous block hash, anchors a new block with a 20-block buffer, increments logs, backfills Pancake V3, retrieves all swap senders, and rechecks every participant with fixed-block Multicall3 handleOf reads. It fails on missing required reads or senders and keeps the prior raw snapshot intact. Public RPCs are used by default; an optional server-only BSC_RPC_URL overrides them and is never written to outputs. Raw caches belong outside this repository. The normalizer updates legacy AIPRO directory counts from the same ledger so header, filters and details reconcile. Source discovery is bounded to supported V2/V3 pools; unsupported discovered pools remain disclosed. No wallet operation occurs.
+
+## Automatic Flap ID Agent Curve discovery
+
+Every activity refresh enumerates all markets from the official BSC factory
+`0xc55820f24015be7c4f18949d9e1363a3609b300e` using fixed-block Multicall3.
+The official app publishes this factory and the phase ABI at
+[Flap ID Agent Curve](https://flap.sh/apps/agent-bonding-curve?lang=zh), artifact
+`v20261023134909522_agent-bonding-curve_8b26639fea52`.
+Portal state ABI is published in
+[Flap's IPortal.sol](https://github.com/flap-sh/FlapVaultExample/blob/main/src/flap/IPortal.sol).
+
+Only actual launched tokens with market phase 3, verified factory membership,
+matching `marketOfToken` / `token()`, Portal status `DEX` (4), and a verified
+canonical V2/V3 pool join the watchlist. The app's `Graduated` label means leaving
+the Agent Curve and does not itself establish DEX listing. Launched tokens still
+on the Flap curve remain in the discovery inventory until eligible. New tokens
+are backfilled from their market's factory creation log, then updated incrementally.
+The factory and supported contract ABI are pinned to the verified deployment;
+unknown phases, required read failures or unsupported canonical pools fail closed.
+
+All normalized token records, participant token summaries, manifest entries,
+filters and exports carry the contract address. Symbols are presentation labels.
+Existing symbol query aliases resolve only to the four original configured CAs.
+Two `.ai` symbols cannot merge, and a new token named AIPRO cannot enter the
+original AIPRO cohort. Log identity includes the asset CA, allowing both sides of
+one pool swap to be recorded separately if both contracts are tracked.
+
+Inner history includes official `virtualBuyFill` / `virtualSellFill` events,
+with Agent Curve amounts explicitly labelled as shares, plus verifiable Portal
+`TokenBought` / `TokenSold` fills labelled as Flap curve. Claim and Transfer events
+never become trades. Token transfers only identify candidate receipts for actual
+Portal fill verification. DEX-routed transactions are counted from Swap events
+rather than counting the Portal facade again; unusual aggregated curve+DEX paths
+may omit a curve leg. DEX fills remain attributed to `transaction.from`, with
+relay limitations disclosed. No wallet, signing or transaction capability is used.
+
+The manifest records factory market counts, launched/eligible inventory,
+canonical pools, snapshot block and exclusions. Dropdowns and wallet filters
+are generated from the manifest. A dedicated two-hour local automation performs
+collection, validation, GitHub push, Cloudflare build checks and public verification;
+it does not depend on a browser tab staying open. Six-hour X evidence imports
+remain separate. Python regression tests use an isolated fixture, not live RPC:
+
+```sh
+python -m pip install -r scripts/activity/requirements.txt
+python -m unittest discover -s tests -p 'test_*.py'
+npm run check
+```

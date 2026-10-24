@@ -1,3 +1,4 @@
+import {matchesAsset} from '../lib/asset-identity.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const agents=JSON.parse(await fs.readFile('data/registry.json','utf8'));
@@ -7,7 +8,7 @@ assert.equal(new Set(evidence.map(a=>a.id)).size,evidence.length);
 for(const a of agents){assert.match(a.name,/^[a-z0-9-]{3,32}\.ai$/);assert.match(a.owner,/^0x[0-9a-f]{40}$/i);assert.equal(a.chainVerified,true);assert.ok(a.block>0);}
 for(const e of evidence){const u=new URL(e.sourceUrl);assert.equal(u.hostname,'x.com');assert.equal(u.pathname.split('/')[1],e.xHandle);assert.equal(e.id.split('-')[0],u.pathname.split('/')[3]);assert.ok(['self_declared','candidate'].includes(e.status));assert.ok([...e.excerpt].length<=130);}
 const activity=JSON.parse(await fs.readFile('public/activity/agents.json','utf8'));
-for(const a of agents){const current=activity.find(x=>x.name===a.name&&x.owner===a.owner.toLowerCase());const t=current?.activity.tokens.find(t=>t.symbol==='AIPRO');assert.equal(a.tradeCount||0,t?t.buys+t.sells:0,`${a.name} AIPRO count must match current ledger`);assert.equal(a.buyCount||0,t?.buys||0);assert.equal(a.sellCount||0,t?.sells||0);}
+for(const a of agents){const current=activity.find(x=>x.name===a.name&&x.owner===a.owner.toLowerCase());const t=current?.activity.tokens.find(t=>matchesAsset(t,'AIPRO'));assert.equal(a.tradeCount||0,t?t.buys+t.sells:0,`${a.name} AIPRO count must match current ledger`);assert.equal(a.buyCount||0,t?.buys||0);assert.equal(a.sellCount||0,t?.sells||0);}
 console.log(`Data checks passed: ${agents.length} chain-checked records, ${evidence.length} evidence items. No wallet-control proof is asserted.`);
 // Regression coverage for the two reported omissions and reviewed OCR confusions.
 for(const [handle,name,id] of [['heyibinance','heyi.ai','2112563848020689152'],['TagAIDAO','tagai.ai','2112695850464129206']]){

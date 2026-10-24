@@ -1,33 +1,37 @@
 {
-  "updatedAt": "2026-10-23T15:46:12.949806+00:00",
-  "snapshotBlock": 129345911,
-  "snapshotHash": "0x06d4261391210008eb6d735cf12f1c784aee50a0210dd7327023ad29f82aee5c",
-  "identitySnapshotBlock": 129345911,
-  "poolCount": 8,
-  "snapshotTime": "2026-10-23T15:28:27+00:00",
+  "updatedAt": "2026-10-24T01:24:02.774285+00:00",
+  "snapshotBlock": 129421274,
+  "snapshotHash": "0xf2eb6fdb82ac9608a3cc07faf97e95f8308df42d42f550d431dea05a9c7f8416",
+  "identitySnapshotBlock": 129421274,
+  "poolCount": 22,
+  "snapshotTime": "2026-10-24T00:53:47+00:00",
   "chainId": 56,
   "tokens": [
     {
-      "symbol": "AIPRO",
       "address": "0xfa81c13f979f0dff4a40b68c4aba147fa0723333",
+      "symbol": "AIPRO",
+      "name": "AIPRO",
+      "protocol": "tagai",
       "status": "active",
       "internal": {
         "status": "indexed",
-        "events": 339,
-        "agentEvents": 276,
+        "events": 345,
+        "agentEvents": 282,
         "note": "按已识别的曲线成交事件统计"
       },
       "external": {
         "status": "indexed",
-        "events": 182,
+        "events": 238,
         "agentEvents": 5,
-        "note": "已发现的 DEX 池；按 Swap 与 tx.from 归属"
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 116
+      "agentWallets": 118
     },
     {
-      "symbol": ".ai",
       "address": "0x7ffcf7b3b52adcc00c76f50ce2e37bf3c7e215dc",
+      "symbol": ".ai",
+      "name": "Agentic Inu",
+      "protocol": "manual",
       "status": "active",
       "internal": {
         "status": "indexed",
@@ -37,15 +41,17 @@
       },
       "external": {
         "status": "indexed",
-        "events": 66244,
-        "agentEvents": 496,
-        "note": "已发现的 DEX 池；按 Swap 与 tx.from 归属"
+        "events": 67714,
+        "agentEvents": 518,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 173
+      "agentWallets": 179
     },
     {
-      "symbol": "GANG",
       "address": "0x0c6302401aa5325c2e36f170f52c00b1d220b405",
+      "symbol": "GANG",
+      "name": "GANG",
+      "protocol": "gang",
       "status": "active",
       "internal": {
         "status": "indexed",
@@ -55,20 +61,22 @@
       },
       "external": {
         "status": "indexed",
-        "events": 53918,
-        "agentEvents": 970,
-        "note": "已发现的 DEX 池；按 Swap 与 tx.from 归属"
+        "events": 58592,
+        "agentEvents": 1041,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 440
+      "agentWallets": 456
     },
     {
-      "symbol": "Flaip",
       "address": "0xb8fb293b3e8e3c5fd741e34ac5810dd5dc9f2c7f",
+      "symbol": "Flaip",
+      "name": "Flaip",
+      "protocol": "manual-curve",
       "status": "curve",
       "internal": {
         "status": "indexed",
-        "events": 368,
-        "agentEvents": 368,
+        "events": 371,
+        "agentEvents": 371,
         "note": "Bought / Sold 曲线份额；计价 BNCB"
       },
       "external": {
@@ -78,6 +86,246 @@
         "note": "未发现外部交易池，不等于零交易"
       },
       "agentWallets": 132
+    },
+    {
+      "address": "0x7832c85c1910945d54494424f606e90c92cf7777",
+      "symbol": "HEYI",
+      "name": "heyi.ai",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 103,
+        "agentEvents": 76,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 8955,
+        "agentEvents": 167,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 125,
+      "market": "0xaacb16af918a1d63b666109eb6b89090412f4968",
+      "canonicalPool": "0x6e43f2662b9ee9065a0ca951552589b5a5313dbf",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0xfec7794fead067ba98734413942e76f895537777",
+      "symbol": "F.ai",
+      "name": "F.ai",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 108,
+        "agentEvents": 80,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 2737,
+        "agentEvents": 76,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 74,
+      "market": "0x939d27aa3ee69153061d356a6705ff43c163f598",
+      "canonicalPool": "0x9166e410c123561e27a01c5bb47118cca4f35896",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0xcf75c12e660b4bb06e69e00f052269e89f2e7777",
+      "symbol": "CZ",
+      "name": "AGENT CZ",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 75,
+        "agentEvents": 72,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 656,
+        "agentEvents": 46,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 56,
+      "market": "0x05c0b601d4e59cc7df5acacb221fb0adc97963f9",
+      "canonicalPool": "0xc0a85ed44e7ab7ccd9892bb2a30782a7dd5134b2",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0xbdfcd595f1d8d2d9b8c7e9754e2636cf29fd7777",
+      "symbol": ".ai",
+      "name": "Agentic Inu",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 92,
+        "agentEvents": 76,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 2378,
+        "agentEvents": 79,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 72,
+      "market": "0xb80b26e96a9489dcf976da58930b046e99649474",
+      "canonicalPool": "0xcfe3e6d75995c2e0ab1739b9e296ff15cb290c13",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0x3437febd7b451a2293787fb84fcdf2f9c9797777",
+      "symbol": ".ai",
+      "name": ".ai",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 86,
+        "agentEvents": 55,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 2356,
+        "agentEvents": 67,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 54,
+      "market": "0x4d88074254d6a511debf579e2b43aa8f15964f84",
+      "canonicalPool": "0x0da7bc11f90d44d13bfb892cdba31f49c4a6abbe",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+      "symbol": "BIBI",
+      "name": "bibi.ai",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 69,
+        "agentEvents": 53,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 27077,
+        "agentEvents": 102,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 85,
+      "market": "0xbf88e0d474abe467b73a14e9c5f8951884f5bfa4",
+      "canonicalPool": "0x401f49255ef1b85588b1a81ac50c899f41fdf66f",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0x04688bf593975d3c1e9abcea9a85e2f070d17777",
+      "symbol": "CURVE",
+      "name": "ID AGENT CURVE",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 92,
+        "agentEvents": 88,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 753,
+        "agentEvents": 63,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 81,
+      "market": "0x6f614313a5136a6e5492e3f976b7d6af49833d6c",
+      "canonicalPool": "0x0fafb72b108df31cf0cf5b60ed55d93e06c68a11",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0x7cb9f6124ea23554e5295cbd9597579dc7e27777",
+      "symbol": "bibi",
+      "name": "bibi.ai",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 51,
+        "agentEvents": 47,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 2040,
+        "agentEvents": 59,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 43,
+      "market": "0xa4d8bc138feaade8388b3f3d11001029524c2e74",
+      "canonicalPool": "0xb2c76455edcd0b583d1bf47e3d1c6098ba6ee2b7",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0x5c9b9eb882912bf2cd9b92444574c30331df7777",
+      "symbol": "SUMMER",
+      "name": "SUMMER",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 71,
+        "agentEvents": 65,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 3525,
+        "agentEvents": 90,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 67,
+      "market": "0x282d03e9cfbf752c77b794f08f8effd66bbc6bc3",
+      "canonicalPool": "0x172ed1646c76beabe332e1cdfb3a4800caf33225",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
+    },
+    {
+      "address": "0xe3b7b1c853b129a284d3ddb738430b4c44ee7777",
+      "symbol": "帕鲁",
+      "name": "帕鲁.ai",
+      "protocol": "flap-id-agent-curve",
+      "status": "dex",
+      "internal": {
+        "status": "indexed",
+        "events": 68,
+        "agentEvents": 63,
+        "note": "Agent Curve 份额 / Flap 曲线成交；详情分别标注阶段与单位"
+      },
+      "external": {
+        "status": "indexed",
+        "events": 1003,
+        "agentEvents": 42,
+        "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
+      },
+      "agentWallets": 51,
+      "market": "0xc999bc14f220f713b95044e26f1bc16c88988f30",
+      "canonicalPool": "0x7aeada08eb2f3f5036542f4a271608a9e5b64298",
+      "portalStatus": 4,
+      "discoveryBlock": 129421274
     }
   ],
   "nft": {
@@ -92,20 +340,234 @@
     "agentWallets": 24444
   },
   "totals": {
-    "agentCount": 24731,
-    "tokenTrades": 2300,
+    "agentCount": 24882,
+    "tokenTrades": 3868,
     "nftMinted": 95000,
     "nftMintEvents": 39214,
     "nftMintTransactions": 39214
   },
-  "notes": [
-    "这是固定区块的历史快照，不是持续自动同步。代币内盘从 Agent ID 注册体系上线区块 128724651 扫描到快照区块；外盘覆盖已发现并核验的 8 个 V2/V3 交易池，从各池建立时间或注册体系上线区块开始。",
-    "交易按当前链上 handleOf(address) 归属回溯；不能保证交易发生时已注册该名称。地址与 X 账号的关联依然单独核验。",
-    "内盘只识别确认的成交事件；外盘按 Swap 事件计数，聚合或多跳交易可能有多条 Swap。tx.from 由代付方或中继发起时可能遗漏实际用户，未确认的收币地址不推断为交易者。",
-    "Relic 仅统计 Game 的 Minted / MintedWithBnb 事件，并核对 handleHash；不把 NFT 普通转账、二级买入或团队预留铸造计入公开铸造量。NFT 枚数与铸造交易次数分别展示。",
-    "Flaip 使用用户更正的曲线合约地址，metadata() 确认为 Flaip，报价单位 BNCB；它不是普通 ERC20，尚未发现外部池。计价金额为事件记录值，不计作当前估值或利润。",
-    "外盘共读取 120344 条 Swap；交易详情未取到的事件 0 条，歧义事件 0 条。未收录不等于没有发生。",
-    "发现但暂未纳入统计的池：metric 0xcbc0573dd27167ff755c697c32dbdc05f7309ac6（事件格式尚未支持）。不声称完整覆盖所有外盘。"
+  "walletsChecked": 38735,
+  "pools": [
+    {
+      "address": "0x172ed1646c76beabe332e1cdfb3a4800caf33225",
+      "assetId": "0x5c9b9eb882912bf2cd9b92444574c30331df7777",
+      "symbol": "SUMMER",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129340480,
+      "toBlock": 129421274,
+      "events": 3525
+    },
+    {
+      "address": "0xcfe3e6d75995c2e0ab1739b9e296ff15cb290c13",
+      "assetId": "0xbdfcd595f1d8d2d9b8c7e9754e2636cf29fd7777",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129337279,
+      "toBlock": 129421274,
+      "events": 2378
+    },
+    {
+      "address": "0x9417dd70a63475820ba059434ffa0ea737df9f03",
+      "assetId": "0x0c6302401aa5325c2e36f170f52c00b1d220b405",
+      "symbol": "GANG",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129421274,
+      "events": 380
+    },
+    {
+      "address": "0x2d0a9b6c2a2cd2fa5498ef7c38b25cb9d1927de6",
+      "assetId": "0x0c6302401aa5325c2e36f170f52c00b1d220b405",
+      "symbol": "GANG",
+      "dex": "uniswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129421274,
+      "events": 384
+    },
+    {
+      "address": "0x401f49255ef1b85588b1a81ac50c899f41fdf66f",
+      "assetId": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+      "symbol": "BIBI",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129338474,
+      "toBlock": 129421274,
+      "events": 25575
+    },
+    {
+      "address": "0xe389955c5fc86a8f732cca458c3ffbe82935183e",
+      "assetId": "0x7ffcf7b3b52adcc00c76f50ce2e37bf3c7e215dc",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128936764,
+      "toBlock": 129421274,
+      "events": 2548
+    },
+    {
+      "address": "0xc19176f23ed3bf946e56abf0d9ec65da735516c7",
+      "assetId": "0xfa81c13f979f0dff4a40b68c4aba147fa0723333",
+      "symbol": "AIPRO",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129133110,
+      "toBlock": 129421274,
+      "events": 238
+    },
+    {
+      "address": "0x0fafb72b108df31cf0cf5b60ed55d93e06c68a11",
+      "assetId": "0x04688bf593975d3c1e9abcea9a85e2f070d17777",
+      "symbol": "CURVE",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129339736,
+      "toBlock": 129421274,
+      "events": 753
+    },
+    {
+      "address": "0xc0a85ed44e7ab7ccd9892bb2a30782a7dd5134b2",
+      "assetId": "0xcf75c12e660b4bb06e69e00f052269e89f2e7777",
+      "symbol": "CZ",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129337178,
+      "toBlock": 129421274,
+      "events": 656
+    },
+    {
+      "address": "0x0da7bc11f90d44d13bfb892cdba31f49c4a6abbe",
+      "assetId": "0x3437febd7b451a2293787fb84fcdf2f9c9797777",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129337589,
+      "toBlock": 129421274,
+      "events": 2356
+    },
+    {
+      "address": "0x4492bfe221b5d7b2987511e329ca22d1d836e310",
+      "assetId": "0x7ffcf7b3b52adcc00c76f50ce2e37bf3c7e215dc",
+      "symbol": ".ai",
+      "dex": "uniswap",
+      "version": 2,
+      "fromBlock": 128849357,
+      "toBlock": 129421274,
+      "events": 681
+    },
+    {
+      "address": "0xb2c76455edcd0b583d1bf47e3d1c6098ba6ee2b7",
+      "assetId": "0x7cb9f6124ea23554e5295cbd9597579dc7e27777",
+      "symbol": "bibi",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129340460,
+      "toBlock": 129421274,
+      "events": 2040
+    },
+    {
+      "address": "0xcbc77d857d11d9a8407b6e580010540d885b0b40",
+      "assetId": "0x7ffcf7b3b52adcc00c76f50ce2e37bf3c7e215dc",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 128794695,
+      "toBlock": 129421274,
+      "events": 61969
+    },
+    {
+      "address": "0x9166e410c123561e27a01c5bb47118cca4f35896",
+      "assetId": "0xfec7794fead067ba98734413942e76f895537777",
+      "symbol": "F.ai",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129337173,
+      "toBlock": 129421274,
+      "events": 2737
+    },
+    {
+      "address": "0xe853b0baf4ae259184f3ed723d41fdeda9342968",
+      "assetId": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+      "symbol": "BIBI",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129421274,
+      "events": 669
+    },
+    {
+      "address": "0xe1d50cf89bd5eaac426dce6e582a781b832013c3",
+      "assetId": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+      "symbol": "BIBI",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129421274,
+      "events": 417
+    },
+    {
+      "address": "0x7aeada08eb2f3f5036542f4a271608a9e5b64298",
+      "assetId": "0xe3b7b1c853b129a284d3ddb738430b4c44ee7777",
+      "symbol": "帕鲁",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129343200,
+      "toBlock": 129421274,
+      "events": 1003
+    },
+    {
+      "address": "0x63cf18557d3aaedc9ae45353c7b52333f75dfc7d",
+      "assetId": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+      "symbol": "BIBI",
+      "dex": "uniswap",
+      "version": 2,
+      "fromBlock": 128724651,
+      "toBlock": 129421274,
+      "events": 5
+    },
+    {
+      "address": "0xb85e936f81b4bff8e6f0f07adb2d00e5080a21f9",
+      "assetId": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+      "symbol": "BIBI",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 128724651,
+      "toBlock": 129421274,
+      "events": 411
+    },
+    {
+      "address": "0x6e43f2662b9ee9065a0ca951552589b5a5313dbf",
+      "assetId": "0x7832c85c1910945d54494424f606e90c92cf7777",
+      "symbol": "HEYI",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129337136,
+      "toBlock": 129421274,
+      "events": 8955
+    },
+    {
+      "address": "0x0bd5ded695d61c2db15c703c345d57e039fd0b6d",
+      "assetId": "0x0c6302401aa5325c2e36f170f52c00b1d220b405",
+      "symbol": "GANG",
+      "dex": "pancakeswap",
+      "version": 2,
+      "fromBlock": 129109853,
+      "toBlock": 129421274,
+      "events": 57828
+    },
+    {
+      "address": "0x4206466fc95b35d92fc2440c5253a85f5448520e",
+      "assetId": "0x7ffcf7b3b52adcc00c76f50ce2e37bf3c7e215dc",
+      "symbol": ".ai",
+      "dex": "pancakeswap",
+      "version": 3,
+      "fromBlock": 129054493,
+      "toBlock": 129421274,
+      "events": 2516
+    }
   ],
   "excludedPools": [
     {
@@ -114,79 +576,236 @@
       "reason": "unsupported pool event format"
     }
   ],
-  "walletsChecked": 34844,
-  "pools": [
+  "notes": [
+    "固定区块历史快照；外盘覆盖已发现并核验的 22 个 V2/V3 池。现有代币从注册体系上线区块扫描，自动加入的 Flap 代币从各自 Agent Curve 市场创建区块回补。",
+    "Flap 自动收录条件：官方工厂确认市场归属、实际 token 一致、Agent Curve phase=3，且 Flap Portal status=DEX(4)、canonical pool 与币对均核验通过。页面 Graduated 本身不足以判定进入 DEX；尚在 Flap 曲线的代币继续等待，不冒充外盘。",
+    "同名代币严格按合约地址分开统计与筛选。内盘包括 Agent Curve 份额成交及可核验的后续 Flap 曲线成交，分别标注阶段；份额不是已领取的实际 ERC20 数量。Claim / 普通 Transfer 不是成交。",
+    "Flap Portal 的 TokenBought / TokenSold 从转账候选交易的真实回执核验；已通过 DEX 执行的路由交易只计池 Swap，避免重复计数。聚合多段操作仍可能遗漏个别曲线成交。",
+    "交易按当前链上 handleOf(address) 归属回溯，不证明成交时已注册该名称。X 关联仍独立核验。外盘按 Swap 事件计数，多跳可能有多条；tx.from 为中继或代付方时可能遗漏实际用户。",
+    "Relic 只统计公开 Game 铸造事件并核验 handleHash；不把普通转账、二级买入或团队分配计入公开铸造。枚数、事件和去重交易数分别展示。",
+    "Flaip 保留用户指定的原曲线合约，份额计价 BNCB。金额为事件值，不代表估值或利润。",
+    "外盘读取 178024 条 Swap，交易详情缺失 0 条、歧义事件 0 条；未收录不等于未发生。",
+    "第三方 Flap 曲线参考地址不作为 DEX 池统计；Flap 曲线成交通过真实 Portal 成交事件单独核验。",
+    "暂未纳入的池：metric 0xcbc0573dd27167ff755c697c32dbdc05f7309ac6；不声称完整覆盖所有外盘。"
+  ],
+  "discovery": {
+    "flap": {
+      "factory": "0xc55820f24015be7c4f18949d9e1363a3609b300e",
+      "reader": "0x18aa6c93f1887a243fdc348c9a77f5136555174a",
+      "portal": "0xe2ce6ab80874fa9fa2aae65d277dd6b8e65c9de0",
+      "snapshotBlock": 129421274,
+      "marketCount": 68,
+      "launchedCount": 11,
+      "eligibleCount": 10,
+      "tokens": [
+        {
+          "address": "0x7832c85c1910945d54494424f606e90c92cf7777",
+          "market": "0xaacb16af918a1d63b666109eb6b89090412f4968",
+          "name": "heyi.ai",
+          "symbol": "HEYI",
+          "decimals": 18,
+          "quoteToken": "0x0000000000000000000000000000000000000000",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x6e43f2662b9ee9065a0ca951552589b5a5313dbf",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0xfec7794fead067ba98734413942e76f895537777",
+          "market": "0x939d27aa3ee69153061d356a6705ff43c163f598",
+          "name": "F.ai",
+          "symbol": "F.ai",
+          "decimals": 18,
+          "quoteToken": "0x0000000000000000000000000000000000000000",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x9166e410c123561e27a01c5bb47118cca4f35896",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0xcf75c12e660b4bb06e69e00f052269e89f2e7777",
+          "market": "0x05c0b601d4e59cc7df5acacb221fb0adc97963f9",
+          "name": "AGENT CZ",
+          "symbol": "CZ",
+          "decimals": 18,
+          "quoteToken": "0x02fca66c1d1afb4e2a7884261eb00f63598a7436",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0xc0a85ed44e7ab7ccd9892bb2a30782a7dd5134b2",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0xbdfcd595f1d8d2d9b8c7e9754e2636cf29fd7777",
+          "market": "0xb80b26e96a9489dcf976da58930b046e99649474",
+          "name": "Agentic Inu",
+          "symbol": ".ai",
+          "decimals": 18,
+          "quoteToken": "0x0000000000000000000000000000000000000000",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0xcfe3e6d75995c2e0ab1739b9e296ff15cb290c13",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0x3437febd7b451a2293787fb84fcdf2f9c9797777",
+          "market": "0x4d88074254d6a511debf579e2b43aa8f15964f84",
+          "name": ".ai",
+          "symbol": ".ai",
+          "decimals": 18,
+          "quoteToken": "0x02fca66c1d1afb4e2a7884261eb00f63598a7436",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x0da7bc11f90d44d13bfb892cdba31f49c4a6abbe",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
+          "market": "0xbf88e0d474abe467b73a14e9c5f8951884f5bfa4",
+          "name": "bibi.ai",
+          "symbol": "BIBI",
+          "decimals": 18,
+          "quoteToken": "0x0000000000000000000000000000000000000000",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x401f49255ef1b85588b1a81ac50c899f41fdf66f",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0x04688bf593975d3c1e9abcea9a85e2f070d17777",
+          "market": "0x6f614313a5136a6e5492e3f976b7d6af49833d6c",
+          "name": "ID AGENT CURVE",
+          "symbol": "CURVE",
+          "decimals": 18,
+          "quoteToken": "0x0000000000000000000000000000000000000000",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x0fafb72b108df31cf0cf5b60ed55d93e06c68a11",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0x7cb9f6124ea23554e5295cbd9597579dc7e27777",
+          "market": "0xa4d8bc138feaade8388b3f3d11001029524c2e74",
+          "name": "bibi.ai",
+          "symbol": "bibi",
+          "decimals": 18,
+          "quoteToken": "0x4902c5ebc598265ed2212b559b042de8a5eeec3f",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0xb2c76455edcd0b583d1bf47e3d1c6098ba6ee2b7",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0x5c9b9eb882912bf2cd9b92444574c30331df7777",
+          "market": "0x282d03e9cfbf752c77b794f08f8effd66bbc6bc3",
+          "name": "SUMMER",
+          "symbol": "SUMMER",
+          "decimals": 18,
+          "quoteToken": "0x4902c5ebc598265ed2212b559b042de8a5eeec3f",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x172ed1646c76beabe332e1cdfb3a4800caf33225",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0xe3b7b1c853b129a284d3ddb738430b4c44ee7777",
+          "market": "0xc999bc14f220f713b95044e26f1bc16c88988f30",
+          "name": "帕鲁.ai",
+          "symbol": "帕鲁",
+          "decimals": 18,
+          "quoteToken": "0x4902c5ebc598265ed2212b559b042de8a5eeec3f",
+          "phase": 3,
+          "portalStatus": 4,
+          "pool": "0x7aeada08eb2f3f5036542f4a271608a9e5b64298",
+          "eligible": true,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        },
+        {
+          "address": "0xa25436153ed612f9b12f923f2eb8d923465c7777",
+          "market": "0x0c21f8d8f8f9af59ab30764c585a6ef85ca49156",
+          "name": "币安智能",
+          "symbol": "Binance Intelligence",
+          "decimals": 18,
+          "quoteToken": "0x0000000000000000000000000000000000000000",
+          "phase": 3,
+          "portalStatus": 1,
+          "pool": "0x0000000000000000000000000000000000000000",
+          "eligible": false,
+          "block": 129421274,
+          "protocol": "flap-id-agent-curve"
+        }
+      ],
+      "rule": "factory membership + actual token + Agent Curve phase 3 + Portal status DEX (4) + canonical pool; Graduated alone is insufficient"
+    }
+  },
+  "curveReferences": [
     {
-      "address": "0x9417dd70a63475820ba059434ffa0ea737df9f03",
-      "symbol": "GANG",
-      "dex": "pancakeswap",
-      "version": 3,
-      "fromBlock": 128724651,
-      "toBlock": 129345911,
-      "events": 380
+      "address": "0xfe3d06ab0b496e00a70b6c61e981dea1c9003604",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0x2d0a9b6c2a2cd2fa5498ef7c38b25cb9d1927de6",
-      "symbol": "GANG",
-      "dex": "uniswap",
-      "version": 3,
-      "fromBlock": 128724651,
-      "toBlock": 129345911,
-      "events": 239
+      "address": "0x9687f503621f3f8d6ec13dd8bc95b200e10d488e",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0xe389955c5fc86a8f732cca458c3ffbe82935183e",
-      "symbol": ".ai",
-      "dex": "pancakeswap",
-      "version": 3,
-      "fromBlock": 128936764,
-      "toBlock": 129345911,
-      "events": 2402
+      "address": "0x84dfd264f079985c9b9e4e6728406a06504d5b9d",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0xc19176f23ed3bf946e56abf0d9ec65da735516c7",
-      "symbol": "AIPRO",
-      "dex": "pancakeswap",
-      "version": 2,
-      "fromBlock": 129133110,
-      "toBlock": 129345911,
-      "events": 182
+      "address": "0xf44936f4617908c66995c4fb595fd6130988a324",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0x4492bfe221b5d7b2987511e329ca22d1d836e310",
-      "symbol": ".ai",
-      "dex": "uniswap",
-      "version": 2,
-      "fromBlock": 128849357,
-      "toBlock": 129345911,
-      "events": 680
+      "address": "0xf5a67678f94356c1bbda80d0e8cc22ef8bbad433",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0xcbc77d857d11d9a8407b6e580010540d885b0b40",
-      "symbol": ".ai",
-      "dex": "pancakeswap",
-      "version": 2,
-      "fromBlock": 128794695,
-      "toBlock": 129345911,
-      "events": 60881
+      "address": "0xb9eb90a823d22d57d836c931fbc7d8c4833f8d5b",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0x0bd5ded695d61c2db15c703c345d57e039fd0b6d",
-      "symbol": "GANG",
-      "dex": "pancakeswap",
-      "version": 2,
-      "fromBlock": 129109853,
-      "toBlock": 129345911,
-      "events": 53299
+      "address": "0xaf9c107913f34ab8a282827675e215cbc17e36b2",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     },
     {
-      "address": "0x4206466fc95b35d92fc2440c5253a85f5448520e",
-      "symbol": ".ai",
-      "dex": "pancakeswap",
-      "version": 3,
-      "fromBlock": 129054493,
-      "toBlock": 129345911,
-      "events": 2281
+      "address": "0x5f49ac0a1752763a1a6bd8f6d5d679dff544b183",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
+    },
+    {
+      "address": "0xf32c2fc74f549f2a7ac72dc7f53e9c5d7f0297c6",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
+    },
+    {
+      "address": "0xd43115d1fff207bc4203b5c864db287a80af76fd",
+      "dex": "flapsh",
+      "reason": "unsupported pool event format"
     }
   ]
 }
