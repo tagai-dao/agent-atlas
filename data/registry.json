@@ -415,9 +415,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 2,
-    "buyCount": 0,
-    "sellCount": 2
+    "tradeCount": 4,
+    "buyCount": 1,
+    "sellCount": 3
   },
   {
     "name": "andrew.ai",
