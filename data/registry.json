@@ -25,9 +25,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 7,
+    "tradeCount": 8,
     "buyCount": 3,
-    "sellCount": 4
+    "sellCount": 5
   },
   {
     "name": "reboot7454.ai",
@@ -155,9 +155,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 15,
-    "buyCount": 8,
-    "sellCount": 7
+    "tradeCount": 17,
+    "buyCount": 9,
+    "sellCount": 8
   },
   {
     "name": "ramensoup.ai",
@@ -15271,9 +15271,9 @@
     "block": 129587724,
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
-    "tradeCount": 2,
+    "tradeCount": 3,
     "buyCount": 2,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "baguspahlevy.ai",
