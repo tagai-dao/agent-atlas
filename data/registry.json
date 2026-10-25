@@ -85,9 +85,9 @@
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
     "block": 129685526,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "ani.ai",
