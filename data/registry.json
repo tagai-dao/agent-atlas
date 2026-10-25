@@ -155,9 +155,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 13,
-    "buyCount": 7,
-    "sellCount": 6
+    "tradeCount": 15,
+    "buyCount": 8,
+    "sellCount": 7
   },
   {
     "name": "ramensoup.ai",
@@ -375,9 +375,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 2,
+    "tradeCount": 4,
     "buyCount": 2,
-    "sellCount": 0
+    "sellCount": 2
   },
   {
     "name": "czheyi.ai",
