@@ -242,3 +242,42 @@ trade/NFT automation also refreshes holdings, verifies public shards and advance
 Local RPC configuration may be selected with `--rpc-env-file /absolute/secure/file --rpc-env-name VARIABLE_NAME`; this reads only that variable and never executes the environment file. Do not place its value in command arguments or logs.
 
 Transaction sender retrieval uses small numeric-ID batches with bounded retries and validates each returned transaction hash and mined block. Only unresolved hashes are retried; read-only transaction metadata can fall back to the previously verified public RPC. This fallback never performs contract reads, signing, or transactions; fixed-block Multicall3 remains mandatory for contract state.
+
+## X association strength policy
+
+Association strength is independent of the original extraction confidence,
+manual `candidate` / `self_declared` review status, and on-chain wallet ownership.
+The `single-identity-v1` policy recognizes two strongest public signals:
+
+- A directly authored post with exactly one photo, cached full-image OCR containing
+  exactly one matching `.ai`, an Agent ID card, and a self-claim/share context.
+  Reposts, third-party/tutorial context, missing attachment expansions or OCR
+  cannot establish this signal.
+- An exact, unambiguous `.ai` in the post author's X **display name**, including
+  `(alice.ai)` and `（alice.ai）`. Similar @handles and brackets in post body text
+  never establish this signal. A display name containing several IDs is ambiguous.
+
+Text, share links, quoted content and incomplete evidence remain weak. Images
+containing multiple `.ai` identities cannot establish associations: OCR-only rows
+are excluded from the public index, X search, linked counts and exports. Independent
+text remains weak; a valid author display-name signal remains strongest. The raw
+rows and review fields are retained in `data/evidence.json` for audit; public
+consumers must use `seedEvidence` / `isAssociationEvidence` rather than raw rows.
+
+`scripts/evidence_policy.py` consumes existing public X responses and cached OCR,
+without fetching posts or running new OCR. Compact provenance is persisted in
+`data/x-evidence-context.json`. Reclassify a published snapshot without collecting
+new X or chain data with:
+
+```sh
+python scripts/reclassify-evidence.py --raw-root /absolute/agent-id-site/raw
+```
+
+`import-local.py` applies the same policy after every changed-source import,
+recognizes display-name identities from cached authors, and fingerprints the policy
+and context as well as the source. Missing context does not promote a candidate.
+Name registration for newly imported identities still uses fixed-block Multicall3.
+Review states never change through strength classification. Directory order, the
+`最强关联` / `仅弱相关` filters, evidence API (`/api/evidence?strength=strongest`),
+profile details and CSV use the same strength rules. Existing activity/NFT and
+holdings snapshots are preserved during evidence-only updates.
