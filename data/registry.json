@@ -5,8 +5,8 @@
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
     "block": 129831144,
-    "tradeCount": 2,
-    "buyCount": 2,
+    "tradeCount": 4,
+    "buyCount": 4,
     "sellCount": 0
   },
   {
@@ -155,9 +155,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 17,
-    "buyCount": 9,
-    "sellCount": 8
+    "tradeCount": 21,
+    "buyCount": 12,
+    "sellCount": 9
   },
   {
     "name": "ramensoup.ai",
