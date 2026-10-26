@@ -34,6 +34,11 @@ class EvidencePolicyTests(unittest.TestCase):
   self.c['12345']['repost']=True;self.assertEqual(p.classify(self.e,self.c)['associationStrength'],'weak')
  def test_raw_ocr_exclusion_even_when_source_has_only_one_mapping(self):
   self.c['12345']['media'][0]['names']=['alice.ai','hidden.ai'];self.assertEqual(p.classify(self.e,self.c)['associationStrength'],'excluded')
+ def test_tutorial_or_someone_elses_card_does_not_become_own_identity(self):
+  for text in ['登录我的 Agentic Wallet，给 AI 安装技能', '一姐 @heyibinance 分享了功能：Agent ID — 您的 Agent 唯一名称。例如：heyi.ai', 'I use my agentic wallet for trading']:
+   self.c['12345']['text']=text;self.assertEqual(p.classify(self.e,self.c)['associationStrength'],'weak')
+ def test_short_stock_share_caption_can_support_own_single_card(self):
+  self.c['12345']['text']='Agent ID — one name for your Agent. Claim your unique Agent ID.';self.assertEqual(p.classify(self.e,self.c)['associationStrength'],'strongest')
  def test_display_name_rows_discovered_once_per_author_identity(self):
   self.c['12345']['displayName']='Alice (alice.ai)';rows=p.profile_mappings(self.c,[]);self.assertEqual(rows[0]['agentId'],'alice.ai');self.assertEqual(p.profile_mappings(self.c,rows),[])
 

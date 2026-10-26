@@ -35,7 +35,7 @@
   },
   "rawEvidenceItems": 2834,
   "excludedEvidenceItems": 5,
-  "strongestEvidenceItems": 292,
-  "weakEvidenceItems": 2537,
-  "associationPolicy": "single-identity-v1"
+  "strongestEvidenceItems": 254,
+  "weakEvidenceItems": 2575,
+  "associationPolicy": "single-identity-v2"
 }

@@ -8,7 +8,7 @@ import json
 import re
 from pathlib import Path
 
-VERSION = 'single-identity-v1'
+VERSION = 'single-identity-v2'
 NAME = re.compile(r'(?<![\w.@/-])([a-z0-9-]{1,40})\s*\.\s*ai\b', re.I)
 
 
@@ -110,8 +110,11 @@ def classify(evidence, context, image_names_by_url=None):
         elif len(media) == 1:
             m = media[0]
             text = c.get('text', '')
-            own = bool(re.search(r'\bmy\b.{0,45}(agent|identity|id)|\bi\s+(?:just\s+)?(?:claimed|registered|got)|我的|我(?:刚|已|申请|注册|领取)|分享.*agent\s*id|agent\s*id\s*[—–-]\s*(?:one name|您的)', text, re.I))
-            third_party = bool(re.search(r'tutorial|教程|排行榜|leaderboard|名单|someone\s+else|他的|她的|their\s+agent', text, re.I))
+            own = bool(re.search(r'\bmy\s+(?:binance\s+)?(?:agent\s*id|ai\s+identity|id)\b|\bi\s+(?:just\s+)?(?:claimed|registered|got)\b|我的\s*(?:agent\s*id|\.ai|身份|ID)|我(?:刚|已)?(?:申请|注册|领取)', text, re.I))
+            # The stock share-card caption only counts as a short author post,
+            # never when embedded as a quote/example in an explanatory article.
+            own = own or (len(text) < 500 and bool(re.match(r'^\s*agent\s*id\s*[—–-]\s*(?:one name|您的)', text, re.I)))
+            third_party = bool(re.search(r'tutorial|教程|排行榜|leaderboard|名单|someone\s+else|他的|她的|their\s+agent|例如[:：]|示意|举例|一姐.{0,40}(?:分享|公布)', text, re.I))
             if not image_excluded and m.get('type') == 'photo' and m.get('ocrComplete') and m.get('names') == [name] and m.get('identityCard') and own and not third_party:
                 strongest.append('own_single_identity_image')
     # A post's known multi-ID image also invalidates older OCR-only rows whose

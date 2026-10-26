@@ -247,7 +247,7 @@ Transaction sender retrieval uses small numeric-ID batches with bounded retries 
 
 Association strength is independent of the original extraction confidence,
 manual `candidate` / `self_declared` review status, and on-chain wallet ownership.
-The `single-identity-v1` policy recognizes two strongest public signals:
+The `single-identity-v2` policy recognizes two strongest public signals:
 
 - A directly authored post with exactly one photo, cached full-image OCR containing
   exactly one matching `.ai`, an Agent ID card, and a self-claim/share context.
