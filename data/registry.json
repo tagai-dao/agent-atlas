@@ -95,9 +95,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 5,
+    "tradeCount": 6,
     "buyCount": 5,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "q154321.ai",
@@ -355,9 +355,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "aka1.ai",
