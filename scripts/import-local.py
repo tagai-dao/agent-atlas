@@ -6,7 +6,8 @@ from evidence_policy import VERSION, load_context, profile_mappings, apply_polic
 parser=argparse.ArgumentParser(description='Import reviewed public local X/Agent ID mappings')
 parser.add_argument('--source',required=True,type=pathlib.Path)
 parser.add_argument('--force',action='store_true')
-parser.add_argument('--context-root',type=pathlib.Path,help='Cached public X responses and OCR; no network or new OCR calls')
+parser.add_argument('--context-root',type=pathlib.Path,help='Cached public X responses and OCR')
+parser.add_argument('--review-cache',type=pathlib.Path,help='Persistent public-post/full-image OCR cache; no cookies, keys or paid API')
 args=parser.parse_args()
 root=pathlib.Path(__file__).resolve().parents[1]
 source_bytes=args.source.read_bytes();fingerprint=hashlib.sha256(source_bytes).hexdigest()
@@ -15,6 +16,10 @@ state_file=out/'source.json'
 context_path=root/'data/x-evidence-context.json'
 previous_context=json.loads(context_path.read_text()) if context_path.exists() else {}
 context=load_context(args.context_root or args.source.parent.parent/'raw',previous_context)
+from x_evidence_review import hydrate_context, refresh_review_cache
+review_pointer=out/'evidence-review-source.json'
+review_cache=args.review_cache or (pathlib.Path(json.loads(review_pointer.read_text())['rawSource']) if review_pointer.exists() else out/'x-evidence-review')
+context=hydrate_context(context,review_cache)
 context_hash=context_fingerprint(context)
 if state_file.exists() and not args.force and (lambda s:s.get('sha256')==fingerprint and s.get('associationPolicy')==VERSION and s.get('contextSha256')==context_hash)(json.loads(state_file.read_text())):
  print(json.dumps({'changed':False,'sourceSha256':fingerprint}));raise SystemExit(0)
@@ -71,8 +76,12 @@ activity={a['name']:a for a in json.load(open(root/'public/activity/agents.json'
 for a in am.values():
  current=activity.get(a['name']);token=next((t for t in current['activity']['tokens'] if t['address']=='0xfa81c13f979f0dff4a40b68c4aba147fa0723333'),None) if current and current['owner']==a['owner'].lower() else None
  if token or 'tradeCount' in a:a.update(tradeCount=token['buys']+token['sells'] if token else 0,buyCount=token['buys'] if token else 0,sellCount=token['sells'] if token else 0)
+research['associationReviewCoverage']=refresh_review_cache(ev,review_cache,context)
+context=hydrate_context(context,review_cache)
+context_hash=context_fingerprint(context)
 apply_policy(ev,research,context)
-context_path.write_text(json.dumps(context,ensure_ascii=False,indent=2)+'\n')
+used_posts={e['sourceUrl'].rstrip('/').split('/')[-1] for e in ev}
+context_path.write_text(json.dumps({k:v for k,v in context.items() if k in used_posts},ensure_ascii=False,indent=2)+'\n')
 for path,data in [('data/evidence.json',ev),('data/registry.json',list(am.values())),('data/research.json',research)]: (root/path).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 (out/'audit.json').write_text(json.dumps({'import':research['localImport'],'rejected':rejected},ensure_ascii=False,indent=2));(out/'chain-checks.json').write_text(json.dumps(checks));state_file.write_text(json.dumps({'sha256':fingerprint,'generatedAt':src['generatedAt'],'associationPolicy':VERSION,'contextSha256':context_hash}))
 print(json.dumps({'changed':True,'removedEvidence':original_count+added-len(ev),'import':research['localImport'],'mergedEvidence':len(ev),'linkedNames':research['linkedNames'],'unexpectedOldRegressionNames':[e['name'] for e in ev if e['name'] in ['registered.ai','josephoxyz.ai','wagar333.ai']]},ensure_ascii=False))

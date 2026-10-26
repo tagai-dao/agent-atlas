@@ -10,12 +10,12 @@
   "mediaMode": "photos and video/GIF preview frames only",
   "apiOldestPost": "2026-10-22T13:28:04.000Z",
   "limitReason": "本机 Grok 索引与既有线索合并，未证明完整覆盖最近 7 天的全部 X 帖子。",
-  "evidenceItems": 2829,
-  "linkedNames": 2755,
+  "evidenceItems": 2825,
+  "linkedNames": 2754,
   "registryRecords": 2923,
   "directoryNames": 251,
   "selfDeclaredItems": 78,
-  "candidateItems": 2751,
+  "candidateItems": 2747,
   "legacyApiLimitReason": "X API 返回 402（credits depleted），7 天检索尚未完成；已保留分页游标。",
   "localImport": {
     "source": "Grok 本机索引",
@@ -34,8 +34,17 @@
     "maxBlock": 129831144
   },
   "rawEvidenceItems": 2834,
-  "excludedEvidenceItems": 5,
-  "strongestEvidenceItems": 254,
-  "weakEvidenceItems": 2575,
-  "associationPolicy": "single-identity-v2"
+  "excludedEvidenceItems": 9,
+  "strongestEvidenceItems": 2263,
+  "weakEvidenceItems": 562,
+  "associationPolicy": "single-identity-v3",
+  "associationPendingReviewItems": 73,
+  "associationReviewCoverage": {
+    "postIdsAttempted": 2823,
+    "publicPostsRead": 2727,
+    "publicEmbedUnavailable": 96,
+    "imagesRecognized": 2563,
+    "recognition": "Local Apple Vision, full image/preview; article images supplemented from original public post",
+    "reviewDate": "2026-10-26"
+  }
 }

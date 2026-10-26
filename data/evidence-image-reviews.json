@@ -1,0 +1,18 @@
+{
+  "afb879a5517c97d1fab9f63ce2bec9f164f82d178fa2ea6b55af39f4cfc61331": {
+    "ignoredOcrNames": [
+      "el.ai"
+    ],
+    "reason": "Visual review: sort icon next to a standalone .ai token badge was merged by OCR; no el.ai identity is present.",
+    "sourceUrl": "https://pbs.twimg.com/media/HVdM0LObAAAsjGh.jpg",
+    "reviewedAt": "2026-10-26"
+  },
+  "11e3c47ab7a8d3ecb8d9fc3d8e87af816468dc7d1c24b0912b38dd98e4c9af75": {
+    "ignoredOcrNames": [
+      "your.ai"
+    ],
+    "reason": "Visual review: promotional sentence, not a second identity.",
+    "sourceUrl": "https://pbs.twimg.com/media/HVc8DCTacAEqJCb.jpg",
+    "reviewedAt": "2026-10-26"
+  }
+}

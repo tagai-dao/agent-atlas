@@ -245,39 +245,37 @@ Transaction sender retrieval uses small numeric-ID batches with bounded retries 
 
 ## X association strength policy
 
-Association strength is independent of the original extraction confidence,
-manual `candidate` / `self_declared` review status, and on-chain wallet ownership.
-The `single-identity-v2` policy recognizes two strongest public signals:
+The `single-identity-v3` policy separates public association strength from source
+confidence, manual review and wallet control. A personally published image with
+one matching .ai is strongest; no particular language or first-person slogan is
+required. The author's exact .ai display name is independently strongest, including
+Chinese/English brackets. Ordinary text and links remain weak.
 
-- A directly authored post with exactly one photo, cached full-image OCR containing
-  exactly one matching `.ai`, an Agent ID card, and a self-claim/share context.
-  Reposts, third-party/tutorial context, missing attachment expansions or OCR
-  cannot establish this signal.
-- An exact, unambiguous `.ai` in the post author's X **display name**, including
-  `(alice.ai)` and `（alice.ai）`. Similar @handles and brackets in post body text
-  never establish this signal. A display name containing several IDs is ambiguous.
+Assess each image, including article inline media and public image previews.
+Count identity images rather than every article cover or unrelated screenshot.
+A multi-ID image cannot establish an association; independent text/profile/card
+signals are assessed separately. Promotional illustrations and token lists are
+not personal identity cards. Exact content-hash OCR reviews in
+`data/evidence-image-reviews.json` distinguish false OCR domains from real names.
+The .al/.a1 suffix correction applies only to an identity card whose headline
+independently repeats the same stem; it never changes display names or domains.
 
-Text, share links, quoted content and incomplete evidence remain weak. Images
-containing multiple `.ai` identities cannot establish associations: OCR-only rows
-are excluded from the public index, X search, linked counts and exports. Independent
-text remains weak; a valid author display-name signal remains strongest. The raw
-rows and review fields are retained in `data/evidence.json` for audit; public
-consumers must use `seedEvidence` / `isAssociationEvidence` rather than raw rows.
+`scripts/x_evidence_review.py` hydrates public embed metadata and locally recognized
+image content; `scripts/x_evidence_ocr.swift` uses native Apple Vision (Tesseract is
+a fallback where installed). Public requests are bounded and cached, use no login
+cookies, private APIs or paid services, and stop starting requests on rate limits.
+An unavailable embed is not proof of deletion. Never turn an unavailable image
+into a negative finding about its owner.
 
-`scripts/evidence_policy.py` consumes existing public X responses and cached OCR,
-without fetching posts or running new OCR. Compact provenance is persisted in
-`data/x-evidence-context.json`. Reclassify a published snapshot without collecting
-new X or chain data with:
+Changed-source imports review only uncached public posts/images and retain full
+article snapshots. The import fingerprint includes the policy and context.
+All raw rows and review states remain in `data/evidence.json`; public consumers
+use `seedEvidence`. Excluded images stay out of X search, linked counts and CSV.
+Directory sort/filter, evidence pages and exports use identical strength rules.
 
 ```sh
-python scripts/reclassify-evidence.py --raw-root /absolute/agent-id-site/raw
+python scripts/reclassify-evidence.py --raw-root /absolute/raw \
+  --review-cache /absolute/public-post-and-image-review-cache
+python -m unittest discover -s tests -p 'test_*.py'
+npm run check
 ```
-
-`import-local.py` applies the same policy after every changed-source import,
-recognizes display-name identities from cached authors, and fingerprints the policy
-and context as well as the source. Missing context does not promote a candidate.
-Name registration for newly imported identities still uses fixed-block Multicall3.
-Review states never change through strength classification. Directory order, the
-`最强关联` / `仅弱相关` filters, evidence API (`/api/evidence?strength=strongest`),
-profile details and CSV use the same strength rules. Existing activity/NFT and
-holdings snapshots are preserved during evidence-only updates.

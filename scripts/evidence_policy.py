@@ -8,8 +8,8 @@ import json
 import re
 from pathlib import Path
 
-VERSION = 'single-identity-v2'
-NAME = re.compile(r'(?<![\w.@/-])([a-z0-9-]{1,40})\s*\.\s*ai\b', re.I)
+VERSION = 'single-identity-v3'
+NAME = re.compile(r'(?<![\w.@/-])([a-z0-9-]{1,40})\.ai\b', re.I)
 
 
 def names(text):
@@ -38,7 +38,9 @@ def load_context(raw_root, previous=None):
             if not user:
                 continue
             photos = []
-            keys = post.get('attachments', {}).get('media_keys', [])
+            article = post.get('article') or {}
+            article_keys = [k for k in [article.get('cover_media'), *article.get('media_entities', [])] if isinstance(k, str)]
+            keys = list(dict.fromkeys(post.get('attachments', {}).get('media_keys', []) + article_keys))
             for key in keys:
                 item = media.get(key, {})
                 ocr = root / 'v2' / 'media' / (re.sub(r'\W', '_', key) + '.jpg.txt')
@@ -50,12 +52,14 @@ def load_context(raw_root, previous=None):
             row = {'authorId': str(user['id']), 'xHandle': user['username'],
                    'displayName': user.get('name', ''), 'postId': str(post['id']),
                    'publishedAt': post.get('created_at'),
-                   'text': post.get('note_tweet', {}).get('text') or post.get('text', ''),
+                   'text': article.get('plain_text') or post.get('note_tweet', {}).get('text') or post.get('text', ''),
+                   'articleComplete': bool(article.get('plain_text')),
+                   'mediaInventoryComplete': all(key in media for key in keys),
                    'repost': any(r.get('type') == 'retweeted' for r in post.get('referenced_tweets', [])),
                    'media': photos, 'source': str(path.relative_to(root))}
             old = context.get(str(post['id']))
             # Never replace a full attachment expansion with a partial response.
-            if not old or sum(p['ocrComplete'] for p in photos) > sum(p['ocrComplete'] for p in old.get('media', [])):
+            if not old or (not old.get('articleComplete') and row.get('articleComplete')) or (not old.get('articleComplete') and sum(p['ocrComplete'] for p in photos) > sum(p['ocrComplete'] for p in old.get('media', []))):
                 context[str(post['id'])] = row
     return context
 
@@ -101,29 +105,30 @@ def classify(evidence, context, image_names_by_url=None):
             strongest.append('author_display_name')
         media = c.get('media', [])
         image_names = sorted({n for m in media for n in m.get('names', [])})
-        if any(len(m.get('names', [])) > 1 for m in media):
+        bad_images = [m for m in media if len(m.get('names', [])) > 1]
+        cards = [m for m in media if m.get('type') in ['photo', 'animated_gif'] and m.get('ocrComplete') and m.get('identityCard') and len(m.get('names', [])) == 1]
+        if bad_images:
             image_excluded = True
             image_reason = 'multi_identity_image'
-        elif len(media) > 1:
-            image_excluded = True
-            image_reason = 'multiple_images'
-        elif len(media) == 1:
-            m = media[0]
+        # Count identity images, not article covers or unrelated wallet screenshots.
+        # No required language, template, or "my Agent ID" keyword.
+        if len(cards) == 1 and cards[0]['names'] == [name]:
             text = c.get('text', '')
-            own = bool(re.search(r'\bmy\s+(?:binance\s+)?(?:agent\s*id|ai\s+identity|id)\b|\bi\s+(?:just\s+)?(?:claimed|registered|got)\b|我的\s*(?:agent\s*id|\.ai|身份|ID)|我(?:刚|已)?(?:申请|注册|领取)', text, re.I))
-            # The stock share-card caption only counts as a short author post,
-            # never when embedded as a quote/example in an explanatory article.
-            own = own or (len(text) < 500 and bool(re.match(r'^\s*agent\s*id\s*[—–-]\s*(?:one name|您的)', text, re.I)))
-            third_party = bool(re.search(r'tutorial|教程|排行榜|leaderboard|名单|someone\s+else|他的|她的|their\s+agent|例如[:：]|示意|举例|一姐.{0,40}(?:分享|公布)', text, re.I))
-            if not image_excluded and m.get('type') == 'photo' and m.get('ocrComplete') and m.get('names') == [name] and m.get('identityCard') and own and not third_party:
+            base = re.escape(name[:-3])
+            own_target = bool(re.search(r'(?:我的(?:就是|\s*(?:agent\s*id|身份|ID))|my\s+(?:agent\s*id|id)(?:\s+is)?)[^\n]{0,35}\b' + base + r'(?:\.ai)?\b', text, re.I))
+            third_party = bool(re.search(r'一姐.{0,40}分享|(?:截图来自|转自|他人的|她的|他的)|(?:for example|例如|示意)[^\n]{0,40}\b' + base + r'\.ai\b', text, re.I))
+            if own_target or not third_party:
                 strongest.append('own_single_identity_image')
+        elif len(cards) > 1:
+            image_reason = image_reason or 'multiple_identity_images'
     # A post's known multi-ID image also invalidates older OCR-only rows whose
     # target media was not persisted. Independent text/profile evidence survives.
     image_only = bool(methods & {'image_ocr'}) and not bool(methods - {'image_ocr', 'manual_review'})
     strength = 'strongest' if strongest else 'excluded' if image_excluded and image_only and image_reason == 'multi_identity_image' else 'weak'
-    reason = '+'.join(strongest) if strongest else image_reason if strength == 'excluded' else 'other_or_incomplete_evidence'
+    incomplete = not matched or any(m.get('type') in ['photo','animated_gif'] and not m.get('ocrComplete') for m in (c.get('media', []) if matched else []))
+    reason = '+'.join(strongest) if strongest else image_reason if strength == 'excluded' else ('image_review_pending' if incomplete else 'other_or_incomplete_evidence')
     result = {'associationStrength': strength, 'associationReasons': strongest or [reason],
-              'associationPolicy': VERSION}
+              'associationPolicy': VERSION, 'associationReviewStatus': 'pending_source' if strength == 'weak' and incomplete else 'assessed'}
     if image_excluded:
         result['excludedImageReason'] = image_reason
         result['excludedImageNames'] = sorted(set(image_names) | set(known_names))
@@ -133,7 +138,7 @@ def classify(evidence, context, image_names_by_url=None):
                                         'mediaCount': len(c.get('media', [])),
                                         'imageNames': image_names, 'source': c['source']}
         if 'own_single_identity_image' in strongest:
-            result['mediaUrl'] = c['media'][0]['url']
+            result['mediaUrl'] = next(m['url'] for m in c['media'] if m.get('identityCard') and m.get('names') == [name])
     return result
 
 
@@ -144,10 +149,7 @@ def apply_policy(evidence, research, context):
             if m.get('url'):
                 by_url.setdefault(m['url'], set()).update(m.get('names', []))
     for e in evidence:
-        if e.get('mediaUrl') and 'image_ocr' in e.get('extractionMethods', []):
-            by_url.setdefault(e['mediaUrl'], set()).add(e['name'].lower())
-    for e in evidence:
-        for key in ['associationStrength', 'associationReasons', 'associationPolicy', 'associationContext', 'excludedImageReason', 'excludedImageNames']:
+        for key in ['associationStrength', 'associationReasons', 'associationPolicy', 'associationContext', 'excludedImageReason', 'excludedImageNames', 'associationReviewStatus']:
             e.pop(key, None)
         e.update(classify(e, context, by_url))
     active = [e for e in evidence if e['associationStrength'] != 'excluded']
@@ -157,6 +159,7 @@ def apply_policy(evidence, research, context):
                     weakEvidenceItems=sum(e['associationStrength']=='weak' for e in active),
                     selfDeclaredItems=sum(e['status']=='self_declared' for e in active),
                     candidateItems=sum(e['status']=='candidate' for e in active),
+                    associationPendingReviewItems=sum(e.get('associationReviewStatus')=='pending_source' for e in active),
                     associationPolicy=VERSION)
     return evidence
 

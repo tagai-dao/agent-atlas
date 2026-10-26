@@ -6,11 +6,15 @@ from evidence_policy import VERSION, load_context, apply_policy, context_fingerp
 
 p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--raw-root', type=Path, required=True)
+p.add_argument('--review-cache', type=Path)
 args = p.parse_args()
 root = Path(__file__).resolve().parents[1]
 data = root / 'data'
 cp = data / 'x-evidence-context.json'
 context = load_context(args.raw_root, json.loads(cp.read_text()) if cp.exists() else {})
+if args.review_cache:
+    from x_evidence_review import hydrate_context
+    context = hydrate_context(context, args.review_cache)
 evidence = json.loads((data / 'evidence.json').read_text())
 # Persist only the exact public posts used for classification (plus explicit
 # display-name identities), rather than publishing unrelated cached X posts.
