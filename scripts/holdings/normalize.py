@@ -7,8 +7,11 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
+import sys
 
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT/'scripts'))
+from registration_history import publish_history
 def load(p):return json.loads(p.read_text())
 def save(p,d):
     p.parent.mkdir(parents=True,exist_ok=True)
@@ -28,6 +31,9 @@ def publish(raw,destination):
     block=anchor['number'];stage=destination.parent/(destination.name+'-next')
     if stage.exists():shutil.rmtree(stage)
     stage.mkdir(parents=True)
+    if 'registryLogs' in complete:
+        history=load(raw/'registration-history.json')
+        publish_history(history, stage, anchor)
     bnb={'address':'native','symbol':'BNB','name':'BNB','decimals':18,'kind':'native','totalSupplyRaw':None}
     by_asset={t['address']:t for t in [bnb,*assets]}
     for w in wallets:

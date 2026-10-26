@@ -19,6 +19,7 @@ from eth_abi import encode, decode
 from Crypto.Hash import keccak
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT/'scripts'))
 REGISTRY = '0x60b9262456de011f7d15a54cdd8c48baaa8b022f'
 MULTI = '0xca11bde05977b3631167028862be2a173976ca11'
 DEPLOY = 127950748
@@ -142,6 +143,8 @@ class Snapshot:
                 logs.extend(rows)
                 if i%25==0:print({'registryLogBatches':i,'total':len(ranges)},flush=True)
         owners=registry_owners(logs);save(self.out/'registry-transfers.json',logs)
+        from registration_history import build_history
+        build_history(logs, self.anchor, self.rpc, self.out, self.source)
         print({'currentIds':len(owners),'snapshotBlock':self.block},flush=True)
         # The curve contract is not an ERC20. Do not fabricate a zero balance.
         activity=load(ROOT/'public/activity/manifest.json')

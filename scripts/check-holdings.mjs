@@ -3,6 +3,23 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 const dir='public/holdings',read=p=>JSON.parse(fs.readFileSync(`${dir}/${p}`));
 const m=read('manifest.json'),activity=JSON.parse(fs.readFileSync('public/activity/manifest.json'));
+const registrations=read('registrations.json');
+assert.equal(registrations.snapshotBlock,m.snapshotBlock);assert.equal(registrations.snapshotHash,m.snapshotHash);
+assert.equal(registrations.timeZone,'Asia/Shanghai');assert.equal(registrations.metric,'first-mint-per-token-id');
+assert.equal(registrations.registry,m.registry);assert.equal(registrations.registryDeployBlock,m.registryDeployBlock);
+let registrationTotal=0,previousDay=null,previousBlock=null;
+for(const row of registrations.days){
+ assert.ok(Number.isSafeInteger(row.registrations)&&row.registrations>=0);
+ if(previousDay!==null){assert.equal(Date.parse(row.date)-Date.parse(previousDay),86400000);assert.equal(row.fromBlock,previousBlock+1);}
+ registrationTotal+=row.registrations;assert.equal(row.cumulative,registrationTotal);assert.ok(row.fromBlock<=row.toBlock);
+ previousDay=row.date;previousBlock=row.toBlock;
+}
+assert.equal(previousBlock,m.snapshotBlock);assert.equal(registrationTotal,registrations.totalRegistrations);
+assert.ok(registrations.totalRegistrations>=m.walletCount);assert.equal(registrations.days.at(-1).complete,false);
+assert.ok(registrations.days.slice(0,-1).every(r=>r.complete));
+const registrationCsv=fs.readFileSync(`${dir}/registrations.csv`,'utf8').replace(/^\uFEFF/,'').trimEnd().split('\n');
+assert.equal(registrationCsv.length,registrations.days.length+1);
+registrations.days.forEach((r,i)=>assert.equal(registrationCsv[i+1],[r.date,r.registrations,r.cumulative,r.complete?'True':'False',m.snapshotBlock].join(',')));
 assert.equal(m.identityCoverage,'all-current-registered-bsc-ai');assert.equal(m.assetCoverage,'tracked-contracts');
 assert.ok(m.walletCount>0);assert.equal(m.chainId,56);assert.ok(m.snapshotHash);
 const assets=new Map(m.assets.map(a=>[a.address,a]));assert.equal(assets.size,m.assets.length);

@@ -279,3 +279,30 @@ python scripts/reclassify-evidence.py --raw-root /absolute/raw \
 python -m unittest discover -s tests -p 'test_*.py'
 npm run check
 ```
+
+## Daily Agent ID registrations
+
+The homepage chart counts each registry token ID once, on its first mint from
+the zero address, using the complete ERC721 Transfer history from deployment.
+Ordinary transfers, burns and remints of the same ID do not create new IDs.
+Days use Asia/Shanghai (UTC+8); zero days are retained and the latest day is
+marked incomplete with its snapshot cutoff. Cumulative first registrations
+include IDs later burned, unlike the current active-wallet count.
+
+`holdings/refresh.py` locates exact midnight block boundaries via cached,
+binary-searched historical block headers bounded by its fixed snapshot. All
+identity and balance calls still use Multicall3. `holdings/normalize.py` publishes
+`/holdings/registrations.json` and `/holdings/registrations.csv` in the same staged
+holdings directory, so the existing two-hour sync also updates the chart.
+Production snapshots missing registration history fail normalization rather
+than silently dropping the chart. `npm run check` verifies matching snapshot
+anchors, daily continuity and cumulative totals.
+
+To backfill from an already verified full holdings raw snapshot without querying
+wallet balances again:
+
+```sh
+python scripts/build-registration-history.py --source /absolute/verified/holdings-raw --out /absolute/new/registrations-raw --publish public/holdings --rpc-env-file /absolute/secure.env --rpc-env-name BSC_RPC_URL
+```
+
+Only the named RPC setting is read; its value is never printed or cached.
