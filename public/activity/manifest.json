@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-26T21:59:44.655148+00:00",
-  "snapshotBlock": 129973116,
-  "snapshotHash": "0x2d3d4947c94336e25bea4c4671bef5328edcdab6ee51f78a59d8a13f2904cd52",
-  "identitySnapshotBlock": 129973116,
+  "updatedAt": "2026-10-26T23:59:12.098416+00:00",
+  "snapshotBlock": 129989001,
+  "snapshotHash": "0x7faf012f4d58652077cd3548f6604e6ff8e1f9411caff6872056a90b9f6f6e62",
+  "identitySnapshotBlock": 129989001,
   "poolCount": 25,
-  "snapshotTime": "2026-10-26T21:55:33+00:00",
+  "snapshotTime": "2026-10-26T23:54:42+00:00",
   "chainId": 56,
   "tokens": [
     {
@@ -41,11 +41,11 @@
       },
       "external": {
         "status": "indexed",
-        "events": 79976,
-        "agentEvents": 815,
+        "events": 80102,
+        "agentEvents": 817,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 353
+      "agentWallets": 354
     },
     {
       "address": "0x0c6302401aa5325c2e36f170f52c00b1d220b405",
@@ -61,11 +61,11 @@
       },
       "external": {
         "status": "indexed",
-        "events": 90204,
-        "agentEvents": 4434,
+        "events": 90653,
+        "agentEvents": 4453,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
-      "agentWallets": 1106
+      "agentWallets": 1108
     },
     {
       "address": "0xb8fb293b3e8e3c5fd741e34ac5810dd5dc9f2c7f",
@@ -101,15 +101,15 @@
       },
       "external": {
         "status": "indexed",
-        "events": 9531,
-        "agentEvents": 203,
+        "events": 9533,
+        "agentEvents": 204,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
       "agentWallets": 134,
       "market": "0xaacb16af918a1d63b666109eb6b89090412f4968",
       "canonicalPool": "0x6e43f2662b9ee9065a0ca951552589b5a5313dbf",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0xfec7794fead067ba98734413942e76f895537777",
@@ -133,7 +133,7 @@
       "market": "0x939d27aa3ee69153061d356a6705ff43c163f598",
       "canonicalPool": "0x9166e410c123561e27a01c5bb47118cca4f35896",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0xcf75c12e660b4bb06e69e00f052269e89f2e7777",
@@ -149,7 +149,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 1564,
+        "events": 1566,
         "agentEvents": 53,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -157,7 +157,7 @@
       "market": "0x05c0b601d4e59cc7df5acacb221fb0adc97963f9",
       "canonicalPool": "0xc0a85ed44e7ab7ccd9892bb2a30782a7dd5134b2",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0xbdfcd595f1d8d2d9b8c7e9754e2636cf29fd7777",
@@ -173,7 +173,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 3485,
+        "events": 3499,
         "agentEvents": 107,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -181,7 +181,7 @@
       "market": "0xb80b26e96a9489dcf976da58930b046e99649474",
       "canonicalPool": "0xcfe3e6d75995c2e0ab1739b9e296ff15cb290c13",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0x3437febd7b451a2293787fb84fcdf2f9c9797777",
@@ -197,7 +197,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 2636,
+        "events": 2639,
         "agentEvents": 67,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -205,7 +205,7 @@
       "market": "0x4d88074254d6a511debf579e2b43aa8f15964f84",
       "canonicalPool": "0x0da7bc11f90d44d13bfb892cdba31f49c4a6abbe",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0xb0e974ee58899dd77eb13c2c0a0adefeb30f7777",
@@ -221,15 +221,15 @@
       },
       "external": {
         "status": "indexed",
-        "events": 46513,
-        "agentEvents": 291,
+        "events": 46910,
+        "agentEvents": 294,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
       "agentWallets": 134,
       "market": "0xbf88e0d474abe467b73a14e9c5f8951884f5bfa4",
       "canonicalPool": "0x401f49255ef1b85588b1a81ac50c899f41fdf66f",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0x04688bf593975d3c1e9abcea9a85e2f070d17777",
@@ -253,7 +253,7 @@
       "market": "0x6f614313a5136a6e5492e3f976b7d6af49833d6c",
       "canonicalPool": "0x0fafb72b108df31cf0cf5b60ed55d93e06c68a11",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0x7cb9f6124ea23554e5295cbd9597579dc7e27777",
@@ -269,7 +269,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 2375,
+        "events": 2376,
         "agentEvents": 74,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -277,7 +277,7 @@
       "market": "0xa4d8bc138feaade8388b3f3d11001029524c2e74",
       "canonicalPool": "0xb2c76455edcd0b583d1bf47e3d1c6098ba6ee2b7",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0x5c9b9eb882912bf2cd9b92444574c30331df7777",
@@ -293,7 +293,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 4660,
+        "events": 4665,
         "agentEvents": 110,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -301,7 +301,7 @@
       "market": "0x282d03e9cfbf752c77b794f08f8effd66bbc6bc3",
       "canonicalPool": "0x172ed1646c76beabe332e1cdfb3a4800caf33225",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0xe3b7b1c853b129a284d3ddb738430b4c44ee7777",
@@ -317,7 +317,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 2190,
+        "events": 2197,
         "agentEvents": 47,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -325,7 +325,7 @@
       "market": "0xc999bc14f220f713b95044e26f1bc16c88988f30",
       "canonicalPool": "0x7aeada08eb2f3f5036542f4a271608a9e5b64298",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     },
     {
       "address": "0xb726477d1743b02c5fdae5ab094745665eeb7777",
@@ -341,7 +341,7 @@
       },
       "external": {
         "status": "indexed",
-        "events": 9963,
+        "events": 10176,
         "agentEvents": 100,
         "note": "已核验的 V2/V3 池；按 Swap 与 tx.from 归属"
       },
@@ -349,7 +349,7 @@
       "market": "0xf1be9e03babd0415d1fd100350bd4cdd1921b87d",
       "canonicalPool": "0x690e21d626cd7896d08740d69767f8c6e6a5aae5",
       "portalStatus": 4,
-      "discoveryBlock": 129973116
+      "discoveryBlock": 129989001
     }
   ],
   "nft": {
@@ -364,13 +364,13 @@
     "agentWallets": 24444
   },
   "totals": {
-    "agentCount": 25372,
-    "tokenTrades": 8155,
+    "agentCount": 25375,
+    "tokenTrades": 8180,
     "nftMinted": 95000,
     "nftMintEvents": 39214,
     "nftMintTransactions": 39214
   },
-  "walletsChecked": 43915,
+  "walletsChecked": 43978,
   "pools": [
     {
       "address": "0x78bcb41ca5390b6e09b385a101d6f186f85b3c6a",
@@ -379,8 +379,8 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
-      "events": 43
+      "toBlock": 129989001,
+      "events": 102
     },
     {
       "address": "0x172ed1646c76beabe332e1cdfb3a4800caf33225",
@@ -389,8 +389,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129340480,
-      "toBlock": 129973116,
-      "events": 4660
+      "toBlock": 129989001,
+      "events": 4665
     },
     {
       "address": "0xcfe3e6d75995c2e0ab1739b9e296ff15cb290c13",
@@ -399,8 +399,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129337279,
-      "toBlock": 129973116,
-      "events": 3485
+      "toBlock": 129989001,
+      "events": 3499
     },
     {
       "address": "0x9417dd70a63475820ba059434ffa0ea737df9f03",
@@ -409,8 +409,8 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
-      "events": 380
+      "toBlock": 129989001,
+      "events": 386
     },
     {
       "address": "0x2d0a9b6c2a2cd2fa5498ef7c38b25cb9d1927de6",
@@ -419,7 +419,7 @@
       "dex": "uniswap",
       "version": 3,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 747
     },
     {
@@ -429,8 +429,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129338474,
-      "toBlock": 129973116,
-      "events": 39411
+      "toBlock": 129989001,
+      "events": 39594
     },
     {
       "address": "0xe389955c5fc86a8f732cca458c3ffbe82935183e",
@@ -439,7 +439,7 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 128936764,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 3213
     },
     {
@@ -449,7 +449,7 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129133110,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 385
     },
     {
@@ -459,7 +459,7 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129339736,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 926
     },
     {
@@ -469,8 +469,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129337178,
-      "toBlock": 129973116,
-      "events": 1564
+      "toBlock": 129989001,
+      "events": 1566
     },
     {
       "address": "0x0da7bc11f90d44d13bfb892cdba31f49c4a6abbe",
@@ -479,8 +479,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129337589,
-      "toBlock": 129973116,
-      "events": 2636
+      "toBlock": 129989001,
+      "events": 2639
     },
     {
       "address": "0x4492bfe221b5d7b2987511e329ca22d1d836e310",
@@ -489,7 +489,7 @@
       "dex": "uniswap",
       "version": 2,
       "fromBlock": 128849357,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 686
     },
     {
@@ -499,8 +499,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129340460,
-      "toBlock": 129973116,
-      "events": 2375
+      "toBlock": 129989001,
+      "events": 2376
     },
     {
       "address": "0xcbc77d857d11d9a8407b6e580010540d885b0b40",
@@ -509,8 +509,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 128794695,
-      "toBlock": 129973116,
-      "events": 71654
+      "toBlock": 129989001,
+      "events": 71780
     },
     {
       "address": "0x9166e410c123561e27a01c5bb47118cca4f35896",
@@ -519,7 +519,7 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129337173,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 3019
     },
     {
@@ -529,7 +529,7 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 669
     },
     {
@@ -539,8 +539,8 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
-      "events": 3004
+      "toBlock": 129989001,
+      "events": 3122
     },
     {
       "address": "0x7aeada08eb2f3f5036542f4a271608a9e5b64298",
@@ -549,8 +549,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129343200,
-      "toBlock": 129973116,
-      "events": 2190
+      "toBlock": 129989001,
+      "events": 2197
     },
     {
       "address": "0x63cf18557d3aaedc9ae45353c7b52333f75dfc7d",
@@ -559,7 +559,7 @@
       "dex": "uniswap",
       "version": 2,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 5
     },
     {
@@ -569,8 +569,8 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
-      "events": 3424
+      "toBlock": 129989001,
+      "events": 3520
     },
     {
       "address": "0x6e43f2662b9ee9065a0ca951552589b5a5313dbf",
@@ -579,8 +579,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129337136,
-      "toBlock": 129973116,
-      "events": 9531
+      "toBlock": 129989001,
+      "events": 9533
     },
     {
       "address": "0x857eddc273a4144538b43d6b99924d1f80fc468f",
@@ -589,7 +589,7 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 128724651,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 98
     },
     {
@@ -599,8 +599,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129109853,
-      "toBlock": 129973116,
-      "events": 88936
+      "toBlock": 129989001,
+      "events": 89320
     },
     {
       "address": "0x690e21d626cd7896d08740d69767f8c6e6a5aae5",
@@ -609,8 +609,8 @@
       "dex": "pancakeswap",
       "version": 2,
       "fromBlock": 129655086,
-      "toBlock": 129973116,
-      "events": 9963
+      "toBlock": 129989001,
+      "events": 10176
     },
     {
       "address": "0x4206466fc95b35d92fc2440c5253a85f5448520e",
@@ -619,7 +619,7 @@
       "dex": "pancakeswap",
       "version": 3,
       "fromBlock": 129054493,
-      "toBlock": 129973116,
+      "toBlock": 129989001,
       "events": 4423
     }
   ],
@@ -638,7 +638,7 @@
     "交易按当前链上 handleOf(address) 归属回溯，不证明成交时已注册该名称。X 关联仍独立核验。外盘按 Swap 事件计数，多跳可能有多条；tx.from 为中继或代付方时可能遗漏实际用户。",
     "Relic 只统计公开 Game 铸造事件并核验 handleHash；不把普通转账、二级买入或团队分配计入公开铸造。枚数、事件和去重交易数分别展示。",
     "Flaip 保留用户指定的原曲线合约，份额计价 BNCB。金额为事件值，不代表估值或利润。",
-    "外盘读取 257427 条 Swap，交易详情缺失 0 条、歧义事件 39 条；未收录不等于未发生。",
+    "外盘读取 258646 条 Swap，交易详情缺失 0 条、歧义事件 41 条；未收录不等于未发生。",
     "第三方 Flap 曲线参考地址不作为 DEX 池统计；Flap 曲线成交通过真实 Portal 成交事件单独核验。",
     "暂未纳入的池：metric 0xdddc399dd650225ade0abd35e5acf1d91cbfc5e7；不声称完整覆盖所有外盘。"
   ],
@@ -647,7 +647,7 @@
       "factory": "0xc55820f24015be7c4f18949d9e1363a3609b300e",
       "reader": "0x18aa6c93f1887a243fdc348c9a77f5136555174a",
       "portal": "0xe2ce6ab80874fa9fa2aae65d277dd6b8e65c9de0",
-      "snapshotBlock": 129973116,
+      "snapshotBlock": 129989001,
       "marketCount": 88,
       "launchedCount": 12,
       "eligibleCount": 11,
@@ -663,7 +663,7 @@
           "portalStatus": 4,
           "pool": "0x6e43f2662b9ee9065a0ca951552589b5a5313dbf",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -677,7 +677,7 @@
           "portalStatus": 4,
           "pool": "0x9166e410c123561e27a01c5bb47118cca4f35896",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -691,7 +691,7 @@
           "portalStatus": 4,
           "pool": "0xc0a85ed44e7ab7ccd9892bb2a30782a7dd5134b2",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -705,7 +705,7 @@
           "portalStatus": 4,
           "pool": "0xcfe3e6d75995c2e0ab1739b9e296ff15cb290c13",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -719,7 +719,7 @@
           "portalStatus": 4,
           "pool": "0x0da7bc11f90d44d13bfb892cdba31f49c4a6abbe",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -733,7 +733,7 @@
           "portalStatus": 4,
           "pool": "0x401f49255ef1b85588b1a81ac50c899f41fdf66f",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -747,7 +747,7 @@
           "portalStatus": 4,
           "pool": "0x0fafb72b108df31cf0cf5b60ed55d93e06c68a11",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -761,7 +761,7 @@
           "portalStatus": 4,
           "pool": "0xb2c76455edcd0b583d1bf47e3d1c6098ba6ee2b7",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -775,7 +775,7 @@
           "portalStatus": 4,
           "pool": "0x172ed1646c76beabe332e1cdfb3a4800caf33225",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -789,7 +789,7 @@
           "portalStatus": 4,
           "pool": "0x7aeada08eb2f3f5036542f4a271608a9e5b64298",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -803,7 +803,7 @@
           "portalStatus": 1,
           "pool": "0x0000000000000000000000000000000000000000",
           "eligible": false,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         },
         {
@@ -817,7 +817,7 @@
           "portalStatus": 4,
           "pool": "0x690e21d626cd7896d08740d69767f8c6e6a5aae5",
           "eligible": true,
-          "block": 129973116,
+          "block": 129989001,
           "protocol": "flap-id-agent-curve"
         }
       ],
