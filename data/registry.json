@@ -115,8 +115,8 @@
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
     "block": 129783061,
-    "tradeCount": 2,
-    "buyCount": 1,
+    "tradeCount": 3,
+    "buyCount": 2,
     "sellCount": 1
   },
   {
