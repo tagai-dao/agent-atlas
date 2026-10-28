@@ -1545,9 +1545,9 @@
     "source": "bnb.fan + BSC RPC",
     "chainVerified": true,
     "block": 129213787,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "cryptonakamoto.ai",
