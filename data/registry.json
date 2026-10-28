@@ -95,8 +95,8 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 6,
-    "buyCount": 5,
+    "tradeCount": 7,
+    "buyCount": 6,
     "sellCount": 1
   },
   {
@@ -155,8 +155,8 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 49,
-    "buyCount": 27,
+    "tradeCount": 50,
+    "buyCount": 28,
     "sellCount": 22
   },
   {
@@ -755,8 +755,8 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
-    "buyCount": 1,
+    "tradeCount": 2,
+    "buyCount": 2,
     "sellCount": 0
   },
   {
