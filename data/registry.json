@@ -155,8 +155,8 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 50,
-    "buyCount": 28,
+    "tradeCount": 52,
+    "buyCount": 30,
     "sellCount": 22
   },
   {
@@ -825,9 +825,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "922.ai",
