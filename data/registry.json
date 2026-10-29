@@ -115,9 +115,9 @@
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
     "block": 129783061,
-    "tradeCount": 3,
+    "tradeCount": 4,
     "buyCount": 2,
-    "sellCount": 1
+    "sellCount": 2
   },
   {
     "name": "nihao.ai",
@@ -775,9 +775,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 2,
+    "tradeCount": 3,
     "buyCount": 2,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "zyf340825.ai",
