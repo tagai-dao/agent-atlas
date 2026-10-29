@@ -8,6 +8,7 @@ import { connectorPreview } from "./scripts/vite/connector-preview-plugin.mjs";
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const managedLinux = readExecutionProfile() === "managed-linux";
+const selfHostConfig = process.env.ATLAS_WRANGLER_CONFIG;
 
 export default defineConfig(async ({ command }) => {
   configureToolEnvironment(process.cwd());
@@ -26,13 +27,12 @@ export default defineConfig(async ({ command }) => {
     },
     plugins: [
       vinext(),
-      sites({ mockAuth: !managedLinux }),
-      connectorPreview(),
+      ...(!selfHostConfig ? [sites({ mockAuth: !managedLinux }), connectorPreview()] : []),
       cloudflare({
-        configPath: "./wrangler.jsonc",
+        configPath: selfHostConfig || "./wrangler.jsonc",
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
-        ...(command === "serve"
+        ...(command === "serve" && !selfHostConfig
           ? {
               config: {
                 services: [
@@ -45,7 +45,7 @@ export default defineConfig(async ({ command }) => {
               },
             }
           : {}),
-        ...(command === "serve"
+        ...(command === "serve" && !selfHostConfig
           ? {
               auxiliaryWorkers: [
                 {

@@ -15,7 +15,13 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "check": "node --test tests/*.test.mjs && node scripts/check-data.mjs && node scripts/check-activity.mjs && node scripts/check-holdings.mjs && tsc --noEmit",
-    "deploy:cloudflare": "wrangler deploy --config dist/server/wrangler.json --keep-vars"
+    "deploy:cloudflare": "wrangler deploy --config dist/server/wrangler.json --keep-vars",
+    "self-host:init": "node scripts/self-host.mjs init",
+    "self-host:dev": "node scripts/self-host.mjs dev",
+    "self-host:build": "node scripts/self-host.mjs build",
+    "self-host:preview": "node scripts/self-host.mjs preview",
+    "self-host:dry-run": "node scripts/self-host.mjs dry-run",
+    "self-host:deploy": "node scripts/self-host.mjs deploy"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -63,12 +69,14 @@
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
     "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "wrangler": "4.92.0",
+    "json5": "2.2.3"
   },
   "type": "module",
   "overrides": {
     "miniflare": {
       "sharp": "0.35.4"
     }
-  }
+  },
+  "license": "MIT"
 }
