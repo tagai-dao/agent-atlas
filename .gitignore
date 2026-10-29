@@ -57,3 +57,10 @@ __pycache__/
 
 # Local Python environment
 /.venv/
+
+# Private credential exports
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json

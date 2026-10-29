@@ -31,7 +31,10 @@ export function assertIndependentConfig(config, production, { deploy = false } =
   if ((config.d1_databases || []).some((db) => db.database_id && productionDatabases.has(db.database_id))) {
     throw new Error('Use an independent database; production database IDs are reserved.');
   }
-  if (config.vars && Object.keys(config.vars).some((k) => /RPC_URL|TOKEN|SECRET|PASSWORD|PRIVATE_KEY/i.test(k))) {
+  const credentialKey = /RPC_URL|TOKEN|SECRET|PASSWORD|PRIVATE[_-]?KEY|API[_-]?KEY|CREDENTIAL|AUTHORIZATION/i;
+  const containsCredentialKey = (value) => value && typeof value === 'object' &&
+    Object.entries(value).some(([key, item]) => credentialKey.test(key) || containsCredentialKey(item));
+  if (containsCredentialKey(config.vars)) {
     throw new Error('Store RPC credentials and secrets with Wrangler secrets, not config.vars.');
   }
   if (config.env) throw new Error('Use one explicit self-host configuration; nested environments are not supported.');

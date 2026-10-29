@@ -10,7 +10,9 @@ test('self-host accepts an independent account and requires an explicit account 
 test('self-host rejects production targets, credential vars and ambiguous environments', () => {
   for (const patch of [{ name: production.name }, { account_id: production.account_id },
     { routes: [{ pattern: 'agent-id.tagai.fun' }] }, { routes: [{ pattern: 'AGENT-ID.TAGAI.FUN/*' }] },
-    { account_id: production.account_id.toUpperCase() }, { d1_databases: [{ database_id: 'production-db' }] }, { vars: { BSC_RPC_URL: 'https://example.test' } }, { env: { production: {} } }]) {
+    { account_id: production.account_id.toUpperCase() }, { d1_databases: [{ database_id: 'production-db' }] }, { vars: { BSC_RPC_URL: 'https://example.test' } },
+    { vars: { OPENAI_API_KEY: '<set-as-server-secret>' } },
+    { vars: { SETTINGS: { api_key: '<set-as-server-secret>' } } }, { env: { production: {} } }]) {
     assert.throws(() => assertIndependentConfig({ ...independent, ...patch }, production));
   }
 });
