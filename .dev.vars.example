@@ -1,0 +1,2 @@
+# Optional server-only HTTPS BSC RPC. Copy this file to .dev.vars for local use.
+# BSC_RPC_URL=https://your-own-bsc-rpc.example/

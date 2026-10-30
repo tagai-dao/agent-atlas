@@ -49,3 +49,18 @@ yarn-error.log*
 
 __pycache__/
 *.pyc
+
+# Independent self-host configuration and build proofs
+/wrangler.self-host.json
+/.self-host/
+!/.dev.vars.example
+
+# Local Python environment
+/.venv/
+
+# Private credential exports
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json
