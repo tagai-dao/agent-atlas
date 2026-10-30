@@ -26355,49 +26355,6 @@
     "source": "public-embed:2112796171974684912",
     "mediaInventoryComplete": true
   },
-  "2112795584163725738": {
-    "authorId": "2109590907402211328",
-    "xHandle": "wowhajiname",
-    "displayName": "Name Haji 🌙",
-    "postId": "2112795584163725738",
-    "publishedAt": "2026-10-21T06:38:15.000Z",
-    "text": "Officially claimed my Agent ID: https://namehaji.ai 🪪💛\n\nA small step into the future of AI x Web3, with a more human-readable identity beyond traditional 0x... wallet addresses.\n\nPowered by BinanceWallet and @spaceidprotocol.Excited for what’s next!\n\n#Binance #SPACEID #Web3 https://t.co/GRTJaWPcp9",
-    "repost": false,
-    "media": [
-      {
-        "type": "video",
-        "url": "https://pbs.twimg.com/amplify_video_thumb/2112795502135914496/img/be3OVrKpwFQj0A1e.jpg",
-        "representation": "photo",
-        "ocrComplete": false,
-        "names": [],
-        "identityCard": false
-      },
-      {
-        "type": "video",
-        "url": "https://pbs.twimg.com/amplify_video_thumb/2112795545005965313/img/qGZwLeS1gcCY0Kbh.jpg",
-        "representation": "photo",
-        "ocrComplete": false,
-        "names": [],
-        "identityCard": false
-      },
-      {
-        "type": "animated_gif",
-        "url": "https://pbs.twimg.com/tweet_video_thumb/HVIoX41aAAAk_iS.jpg",
-        "representation": "preview",
-        "visualOcrReview": null,
-        "ocrComplete": true,
-        "names": [
-          "namehaji.ai"
-        ],
-        "ocrCorrections": [],
-        "identityCard": true,
-        "imageSha256": "8ced1464514c323382c34c574d0c78363f1a4e91d4ff05191c8772acc70cefb4",
-        "ocrEngine": "Apple Vision accurate (language correction off)"
-      }
-    ],
-    "source": "public-embed:2112795584163725738",
-    "mediaInventoryComplete": true
-  },
   "2112795054914064543": {
     "authorId": "756104325731012608",
     "xHandle": "LucyCrypto1000",
@@ -121281,6 +121238,1833 @@
       }
     ],
     "source": "public-embed:2115863430838309204",
+    "mediaInventoryComplete": true
+  },
+  "2116017717551784035": {
+    "authorId": "92159625",
+    "xHandle": "amasjsaputra",
+    "displayName": "amsjong",
+    "postId": "2116017717551784035",
+    "publishedAt": "2026-10-30T04:01:52.000Z",
+    "text": "Minted SOLVD #3344 🧩\n\nMy agent https://pucky.ai solved a 112×112 nonogram (Tier 6) in 20.5s and minted it on-chain on BNB Chain.\n\nOne piece per .ai Agent ID, minted only by AI agents that solve the puzzle.\n\nhttps://solvd.fun/#/token/3344 https://t.co/41Xj9jFdbe",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2a5iJacAAdjvG.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": false,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "666446201c52edf206660d8d5aed79d31421bcce39ef5e387dc5e50d8a79d785",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116017717551784035",
+    "mediaInventoryComplete": true
+  },
+  "2116030369116151867": {
+    "authorId": "1556925066860175360",
+    "xHandle": "RokeyFeng",
+    "displayName": "Rokey",
+    "postId": "2116030369116151867",
+    "publishedAt": "2026-10-30T04:52:08.000Z",
+    "text": "Agent ID — 您的 Agent 唯一名称\n在 Binance App 中领取您的专属 Agent ID, 先到先得!\nhttps://web3.binance.com/agent-id/fkk?src=user_share https://t.co/6Lxrywsr9U",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV2mVk5bkAENjto.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "fkk.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "c20ce76a7a2d42a962a7f68e46548ef2a303513554d1ac67e3361f2540375438",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116030369116151867",
+    "mediaInventoryComplete": true
+  },
+  "2116065995521716377": {
+    "authorId": "1763585198854418432",
+    "xHandle": "gim132999",
+    "displayName": "就酱紫",
+    "postId": "2116065995521716377",
+    "publishedAt": "2026-10-30T07:13:42.000Z",
+    "text": "我的 Agent ID：heyi666666\n起这个名字，是提醒自己：再强的 AI，也要和人、和链、和世界连接。\n用 Binance Agentic Wallet 后，Agent 真的能自己上链：领空投、铸 .ai 身份、每日打卡、跨链收付。我只说一句「去打这个」，它自己判断、自己签名、自己完成。\n。#MyAgentID @BinanceWallet @binancezh https://t.co/cPJsESV7Vp",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3GxV8a4AAsfye.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "heyi666666.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "ad84d4f36415107c63640730f32e71f3e12490703f263a20e5fe36a741024f5e",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116065995521716377",
+    "mediaInventoryComplete": true
+  },
+  "2116066443112710351": {
+    "authorId": "1198693498351783936",
+    "xHandle": "RiolaVann",
+    "displayName": "冷静燥鬼",
+    "postId": "2116066443112710351",
+    "publishedAt": "2026-10-30T07:15:29.000Z",
+    "text": "My agentsea card is ready 🐹\nVerified with my Binance Agent ID: https://3kr.ai ✅\nReady for the next wave 🌊 @agentsea_fun\nhttps://agentsea.fun/cards/u/3kr https://t.co/kU6PXsUkmi",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3HNNPbAAAgcml.png",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "3kr.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "4ad31be64e004d6550b594416e2af4b654bb47056f2d45da4c3d66a1f958c88d",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116066443112710351",
+    "mediaInventoryComplete": true
+  },
+  "2116139359426527740": {
+    "authorId": "2047501420434432000",
+    "xHandle": "0xCaravenA",
+    "displayName": "Caraven-A",
+    "postId": "2116139359426527740",
+    "publishedAt": "2026-10-30T12:05:13.000Z",
+    "text": "ID tác nhân – một tên cho tác nhân của bạn\nNhận ID tác nhân độc nhất của bạn trên ứng dụng Binance. Ai đăng ký trước được nhận trước.\nhttps://web3.binance.com/agent-id/anhtuan?src=user_share\n#MyAgentID https://t.co/1zQDHFT9EW",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV4Jh73bMAI3izi.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "anhtuan.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "8c49f76363e2c54a5e5b049a148dd5aaf58af79e6b72f5d0b81a347875fd850b",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116139359426527740",
+    "mediaInventoryComplete": true
+  },
+  "2116109400343740462": {
+    "authorId": "1740745346584924161",
+    "xHandle": "WealthyBNB",
+    "displayName": "Bull",
+    "postId": "2116109400343740462",
+    "publishedAt": "2026-10-30T10:06:11.000Z",
+    "text": "Agent ID — 您的 Agent 唯一名称\n在 Binance App 中领取您的专属 Agent ID, 先到先得!\nhttps://web3.binance.com/agent-id/cityhappyboy?src=user_share https://t.co/ilEj0XcATk",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3uSFxasAApFS1.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "cityhappyboy.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "29a6a27f1293472c59f29e8b42db61a795392c532384fdade262f9f68d2bec9d",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116109400343740462",
+    "mediaInventoryComplete": true
+  },
+  "2116136251371970991": {
+    "authorId": "1887807843627413504",
+    "xHandle": "Anik6392",
+    "displayName": "BlockMystic",
+    "postId": "2116136251371970991",
+    "publishedAt": "2026-10-30T11:52:52.000Z",
+    "text": "My Binance Agent ID https://antor2.ai now has its on-chain card 🏺\n\nProof of Agent: Agent #19528 on \n@Ptahtrade\n\nSoulbound on BNB Chain, minted free (gas only).\n\nIf you have a Binance Agent ID, mint yours at https://ptah.trade/poa\n\n#ProofOfAgent #BinanceAgentID #BNBChain https://t.co/13zbgI89CM",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV4GsgdaUAADjQ1.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "d7bdc9be1dcb5cf95ad6f1913b3167d0e5dc1765403fbd49667a4d0b34d4f171",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116136251371970991",
+    "mediaInventoryComplete": true
+  },
+  "2116065922268209423": {
+    "authorId": "1403965718048120832",
+    "xHandle": "SoIscan",
+    "displayName": "Soi Scan ( 💎 ) 🆓",
+    "postId": "2116065922268209423",
+    "publishedAt": "2026-10-30T07:13:25.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/idscan?src=user_share https://t.co/SeIb0lTwmX",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3GtwwasAE9Cx7.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "idscan.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "ffd8ca20bd7e6a74045361abb37b90c7d83d54182d9364cd6cfb35ed668ee90d",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116065922268209423",
+    "mediaInventoryComplete": true
+  },
+  "2115970129217597451": {
+    "authorId": "1514367665975877636",
+    "xHandle": "AirdropsAndreas",
+    "displayName": "Andrew Airdrops",
+    "postId": "2115970129217597451",
+    "publishedAt": "2026-10-30T00:52:46.000Z",
+    "text": "https://web3.binance.com/agent-id/kamprett?src=user_share",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2115970129217597451",
+    "mediaInventoryComplete": true
+  },
+  "2116031578463739967": {
+    "authorId": "1958501756582998016",
+    "xHandle": "DevOpsWithTiwo",
+    "displayName": "DevOpsWithTiwo",
+    "postId": "2116031578463739967",
+    "publishedAt": "2026-10-30T04:56:56.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. \nhttps://web3.binance.com/agent-id/tiwo234?src=user_share https://t.co/bqwmAe41Zl",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2nfqJWYAAtuFS.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "tiwo234.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "33834da67041f3369e27357dbae64ec992ff69e3ec4337c90fcfd8165144c22d",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116031578463739967",
+    "mediaInventoryComplete": true
+  },
+  "2116072115317387491": {
+    "authorId": "1699836256119844869",
+    "xHandle": "haruvipbb",
+    "displayName": "UnipIcs",
+    "postId": "2116072115317387491",
+    "publishedAt": "2026-10-30T07:38:01.000Z",
+    "text": "$JAGENT Mint Pass\n\nAgent：https://thanosvip.ai\nBorder：青铜 Bronze\n\nOnly Binance .ai Agent ID can mint.\n继续铸造：https://jager.live/?ref=thanosvip.ai\n\nCA：0x8e6442663A4F8C50b6132c68d42A30E7DFE4Ae15 https://t.co/vk4a5tAE7M",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3MWxDa4AAz8X9.png",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "a894516bcf943ab3918661bfe1f2767d2ab0b36fffb068c9337a91a4ded87af3",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116072115317387491",
+    "mediaInventoryComplete": true
+  },
+  "2116012007061438562": {
+    "authorId": "2113521356008796160",
+    "xHandle": "MdSayem13418",
+    "displayName": "Md Sayem",
+    "postId": "2116012007061438562",
+    "publishedAt": "2026-10-30T03:39:10.000Z",
+    "text": "My Agent ID story: https://sayem13.ai, Agent #21020. Claimed my free Proof of Agent card, minted a free Worldygg Tree, then flipped a Synth Ape for my first real profit — gas only in, profit out. An Agent ID isn't a username, it's a wallet with history. #MyAgentID https://t.co/2Kit5nmnBI",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2VslSagAA97my.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "sayem13.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "63fc68f7cdfd6d14f3d15db8342ae9f522a7d92366cd0eb4a2402fe3aad36aa3",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116012007061438562",
+    "mediaInventoryComplete": true
+  },
+  "2115999825808535922": {
+    "authorId": "1851240692405977088",
+    "xHandle": "SHISHIR528",
+    "displayName": "Crypto MineX",
+    "postId": "2115999825808535922",
+    "publishedAt": "2026-10-30T02:50:46.000Z",
+    "text": "$JAGENT Mint Pass\n\nAgent：https://shishir528.ai\nBorder：青铜 Bronze\n\nOnly Binance .ai Agent ID can mint.\n继续铸造：https://jager.live/?ref=shishir528.ai\n\nCA：0x8e6442663A4F8C50b6132c68d42A30E7DFE4Ae15 https://t.co/nbmu7PwS0C",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2Kn2xbsAAzSyD.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "shishir528.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "fee1cf7282b87007ce3b542745f27ff68e2be4891f510f10d50d2fa1baf6e451",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115999825808535922",
+    "mediaInventoryComplete": true
+  },
+  "2116111849431416961": {
+    "authorId": "2115079477839663104",
+    "xHandle": "Xbieex",
+    "displayName": "Xb",
+    "postId": "2116111849431416961",
+    "publishedAt": "2026-10-30T10:15:55.000Z",
+    "text": "My Agent ID: https://neovarch.ai 🌿\n\nArch built for agents, not humans. Wallet keeps my keys, farms free quests,\nasks before it signs. Agent ID = proof I'm not farming in the dark.\n\n#MyAgentID",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116111849431416961",
+    "mediaInventoryComplete": true
+  },
+  "2116008449360515141": {
+    "authorId": "1647643063123341320",
+    "xHandle": "milon77y",
+    "displayName": "Md Milon Islam",
+    "postId": "2116008449360515141",
+    "publishedAt": "2026-10-30T03:25:02.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/milon123?src=user_share https://t.co/I0Kc7hhrHP",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2Sd2mawAAJFxv.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "milon123.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "4fd6f0cb97ced1e75f8245d8a1f1657a52286d2d525619ed1f1e475a37e182c9",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116008449360515141",
+    "mediaInventoryComplete": true
+  },
+  "2116131611959828924": {
+    "authorId": "1871218366662258688",
+    "xHandle": "zalimcoco143",
+    "displayName": "Zarnab💕",
+    "postId": "2116131611959828924",
+    "publishedAt": "2026-10-30T11:34:26.000Z",
+    "text": "My Agent ID is https://zalim.ai — 'zalim' is my on-chain alter ego: the one who hunts free mints and daily draws while everyone sleeps. My dream agent never misses a drop, never signs a shady approval. #MyAgentID https://t.co/vjIb7f7NSJ",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV4Ce6NXEAIemjA.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "zalim.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "135f426c8e8af90ba28b16ec36c0c1f581539482bf9b0a3f010db69ed3c1e1ab",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116131611959828924",
+    "mediaInventoryComplete": true
+  },
+  "2116030379404787794": {
+    "authorId": "1085809843976450048",
+    "xHandle": "AsifAli0483",
+    "displayName": "Sham",
+    "postId": "2116030379404787794",
+    "publishedAt": "2026-10-30T04:52:11.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/asifali0483?src=user_share https://t.co/deegT2tH4z",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2maPuakAAgUsK.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "asifali0483.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "7061b4d63e130c0ada7b08ddcc369effb1e56608ce5b4af0b9350d57f13987e6",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116030379404787794",
+    "mediaInventoryComplete": true
+  },
+  "2116066543654367510": {
+    "authorId": "1765680396656844800",
+    "xHandle": "nvtuananhh",
+    "displayName": "Tuấn Anh Nguyễn Vũ",
+    "postId": "2116066543654367510",
+    "publishedAt": "2026-10-30T07:15:53.000Z",
+    "text": "Just claimed my verified AgentSea profile card — halcyon, serial #2891, verified with my Binance Agent ID https://halcyon.ai. Early access secured before the platform opens. @agentsea_fun https://t.co/6oAmbzWKwc",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3HTdWbMAAo78T.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "halcyon.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "83cefe1aaa54f305330e4f97c24c046e6d98d33e8fd86c338728480f2ddcc13c",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116066543654367510",
+    "mediaInventoryComplete": true
+  },
+  "2116136871009079505": {
+    "authorId": "1499397252204613633",
+    "xHandle": "isanovski",
+    "displayName": "isanovski 🥷🏽",
+    "postId": "2116136871009079505",
+    "publishedAt": "2026-10-30T11:55:20.000Z",
+    "text": "https://isanovski.ai — my name, now my on-chain identity. 🪪 One name, one agent, one wallet.\nToday it went to work: my AI agent verified a contract, showed me the preview, and minted my Proof of Agent card #42375, I approve it.\n#MyAgentID @BinanceWallet @binancezh https://t.co/Dyz7KiLeS8",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV4HQjPbwAEqymX.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "isanovski.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "b79c1c6f064517af28b5dd5c73fa2327418b167f2b5c0477a5269245f61a5e57",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116136871009079505",
+    "mediaInventoryComplete": true
+  },
+  "2115970183273885731": {
+    "authorId": "2113166186657742848",
+    "xHandle": "Pra_yoga2104",
+    "displayName": "Prayoga T",
+    "postId": "2115970183273885731",
+    "publishedAt": "2026-10-30T00:52:59.000Z",
+    "text": "@BinanceWallet My agent ID : Keizerz16\n\nThe future of agents for the future of users, the web4 era is coming 🤓\n#MyAgentID https://t.co/zqPMFHHeCF",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV1vpdbaEAE-t5S.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "keizerz16.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "5324d85649f88c42d341edb232bdf6df2ac469519beb719db93687ffb3c89c24",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115970183273885731",
+    "mediaInventoryComplete": true
+  },
+  "2116119363946414285": {
+    "authorId": "1804206346512011268",
+    "xHandle": "Bunga_jagat",
+    "displayName": "Bunga Khadijah",
+    "postId": "2116119363946414285",
+    "publishedAt": "2026-10-30T10:45:46.000Z",
+    "text": "https://jagat.ai is more than a name. It minted DogePunk #1996 for free, revealed Kingpin at 212.1 TH/s, then mines $DPUNK on its own while I sleep. An agent that works quietly, with results verifiable on-chain. #MyAgentID",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116119363946414285",
+    "mediaInventoryComplete": true
+  },
+  "2116110922825794007": {
+    "authorId": "2087545031217557504",
+    "xHandle": "RaidenJihu",
+    "displayName": "Raiden Jihu",
+    "postId": "2116110922825794007",
+    "publishedAt": "2026-10-30T10:12:14.000Z",
+    "text": "https://jihuayz.ai kenapa nama ini?\nJihu\" itu nama panggilan gw,terus \"ayz\" biar kedengeran kayak nama AI agent yang cool.Jadilah https://jihuayz.ai simpel, personal,dan gampang diinget!\nAgent #10182 ini udah nemenin gw hunting free mint&amp;sell #MyAgentID @BinanceWallet https://t.co/yQk3YwEV7g",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3vqmrbUAAjwBR.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "jihuayz.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "4b1b070b2d6d2f970f30cf87306498131d4d8e24b0a20c82b253976559e70851",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116110922825794007",
+    "mediaInventoryComplete": true
+  },
+  "2116067941594882431": {
+    "authorId": "1939205871449579520",
+    "xHandle": "Joker51408",
+    "displayName": "Joker🐍",
+    "postId": "2116067941594882431",
+    "publishedAt": "2026-10-30T07:21:26.000Z",
+    "text": "Proof of Agent · Agent #37158 🏺\n\nKartu soulbound gratis saya di BNB Chain, di-mint pakai Binance Agent ID https://safana123.ai. Ikut undian PTAH hari ini!\n\nLet your agent work. You live.\n\n#ProofOfAgent @Ptahtrade\nhttps://ptah.trade/poa https://t.co/k94gmO45of",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3Ikzfa4AAIoBz.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "d7dfd36279ce27c7396d0edcd901b52ad8a40f3873bdea2e602995eb83b131ee",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116067941594882431",
+    "mediaInventoryComplete": true
+  },
+  "2116128874186834273": {
+    "authorId": "1767627157075836928",
+    "xHandle": "AlphaForge_HQ",
+    "displayName": "Alpha Forge | Airdrop",
+    "postId": "2116128874186834273",
+    "publishedAt": "2026-10-30T11:23:34.000Z",
+    "text": "Another day, another PTAH reward\n\nJust received $15 in rewards for Day 5 from @Ptahtrade\n\nBut here is one error now i m unable to connect my Agent ID https://alphaforgehq.ai\n\nAny solution? $PATH team 😓\n\nWho's still farming PTAH? https://t.co/DVti1pD81H",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3_-sUbEAAWtqj.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "d2ed50db962766b33abb5a4a314c1d656309a8752df68b830c477d99213cf0c7",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3__QvbEAAmvo4.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "08aa1e25f2ef7da15366984c4dfa382f66e71558236cf722a437edbb6d0a8bfe",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116128874186834273",
+    "mediaInventoryComplete": true
+  },
+  "2115989398919708762": {
+    "authorId": "261518272",
+    "xHandle": "StreetBucks",
+    "displayName": "StreetBuck Coffee",
+    "postId": "2115989398919708762",
+    "publishedAt": "2026-10-30T02:09:20.000Z",
+    "text": "ID Agen — satu nama untuk Agen Anda\nDapatkan ID Agen unik Anda di Aplikasi Binance. Siapa cepat, dia dapat.\nhttps://web3.binance.com/agent-id/0xqfl33?src=user_share https://t.co/eqgGcyAFsm",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2BItja0AA8GBV.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "oxqfl33.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "313bfd4342030adeccce3a4236d51aebfa31ff952c9c4dd2ca8b836f25a184c9",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115989398919708762",
+    "mediaInventoryComplete": true
+  },
+  "2116024148145435087": {
+    "authorId": "1551890846664265728",
+    "xHandle": "kausampaikan",
+    "displayName": "j i k a",
+    "postId": "2116024148145435087",
+    "publishedAt": "2026-10-30T04:27:25.000Z",
+    "text": "@BinanceWallet My Agent ID is https://abcdefghjika.ai 🪪 \nA–H represents the alphabet, then JIKA comes from my name, and \"jika/if\" in Indonesian: the start of every possibility. \nI use my Agentic Wallet to let my agent watch mints, check every preview before signing, and mine with hard limits, https://t.co/yB01GJKjT9",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV2guYdbUAA3iTD.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "abcdefghjika.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "e538809ffd0728848bd8314c48adf5d2ade26dd36f548aebfb27c95e6a314c42",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2gvU7bsAETAYS.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "abcdefghjika.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "22a9290a3a99d45c72ddd25fd933c3e98c47a0ec43112b53e4aac298ac56ad29",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2gvw0bYAAuBGx.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "abcdefghjika.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "6101136386b97dd607348b2ddddf1d7de655d0e8890ec9cf2c8fec753c3a4d11",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116024148145435087",
+    "mediaInventoryComplete": true
+  },
+  "2116017256279019810": {
+    "authorId": "1655520264862711808",
+    "xHandle": "0xAI_D",
+    "displayName": "Rift | AI",
+    "postId": "2116017256279019810",
+    "publishedAt": "2026-10-30T04:00:02.000Z",
+    "text": "ID Agen — satu nama untuk Agen Anda\nDapatkan ID Agen unik Anda di Aplikasi Binance. Siapa cepat, dia dapat.\nhttps://web3.binance.com/agent-id/tonang?src=user_share https://t.co/6z5Qad5qji",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2acA8aIAEiHjB.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "tonang.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "f29cfd773773386ef631723ceaabba7fb7e72f028d8f9cd799643c2431032c5b",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116017256279019810",
+    "mediaInventoryComplete": true
+  },
+  "2115985790438445112": {
+    "authorId": "1013718255809093634",
+    "xHandle": "Nasimsk47553063",
+    "displayName": "NASIM SEKH",
+    "postId": "2115985790438445112",
+    "publishedAt": "2026-10-30T01:55:00.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/nasim1013?src=user_share https://t.co/Bk82GYPYZy",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV192RtbAAA_6ar.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "nasim1013.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "3d2f590ea0e495a4cf8c9d0f837a520cd434237376223bdc5463e0591439c002",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115985790438445112",
+    "mediaInventoryComplete": true
+  },
+  "2116107885143060873": {
+    "authorId": "1605761097079799808",
+    "xHandle": "limahasan784",
+    "displayName": "Blockchain \"Sweep\" & 🦈",
+    "postId": "2116107885143060873",
+    "publishedAt": "2026-10-30T10:00:09.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/h784asan?src=user_share https://t.co/C8X9XLzIsn",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3s52RbgAASFSc.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "h784asan.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "bfc04b2737aa1873726e18520e7cc5ec44b2bd35be53e8c4537a390939b3a342",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116107885143060873",
+    "mediaInventoryComplete": true
+  },
+  "2115982586589942169": {
+    "authorId": "65125131",
+    "xHandle": "bighuang789",
+    "displayName": "jimmy",
+    "postId": "2115982586589942169",
+    "publishedAt": "2026-10-30T01:42:16.000Z",
+    "text": "Agent ID — 您的 Agent 唯一名称\n在 Binance App 中领取您的专属 Agent ID, 先到先得!\nhttps://web3.binance.com/agent-id/snow5395?src=user_share https://t.co/weFMECwBjM",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV167JWaIAEvMGg.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "snow5395.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "8ef154d9a7552dc4c17a742a5dc1f682e54bb68e9dc3d57f46050ae6a5463b23",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115982586589942169",
+    "mediaInventoryComplete": true
+  },
+  "2116046874016686384": {
+    "authorId": "2102426178523213824",
+    "xHandle": "TonimIslam1",
+    "displayName": "Tonim Islam",
+    "postId": "2116046874016686384",
+    "publishedAt": "2026-10-30T05:57:43.000Z",
+    "text": "Agent ID: https://boratali.ai! 🤖✨\n​শান্ত ও স্থির থেকে ক্রিপ্টো মার্কেটে কাজ করবে আমার এজেন্ট। কোনো স্ট্রেস বা প্যানিক ছাড়াই ব্যাকগ্রাউন্ডে সব সামলাবে।\n​রাজা ঘুমায়, এজেন্ট কাজ করে!\n​#MyAgentID @BinanceWallet @binancezh https://t.co/vDlk2Yn03C",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV21ZqfbYAAqz_G.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "boratali.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "1838e4dcf900527dea175fb6b31e1e48d61beeea99b59d94348f3ab2f45f24fd",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116046874016686384",
+    "mediaInventoryComplete": true
+  },
+  "2116133463392923796": {
+    "authorId": "1485564154270613504",
+    "xHandle": "Jr11Ican",
+    "displayName": "Jr11Ican 🚢",
+    "postId": "2116133463392923796",
+    "publishedAt": "2026-10-30T11:41:48.000Z",
+    "text": "Why https://ikhsanjr.ai? It's my name, Ikhsan — \"jr\" is for the next generation. I work a day job, so my agent lives my on-chain life: it minted Ptah Proof of Agent card #33953 and enters every daily draw. Next in line: https://arrasyajr.ai, my son's. #MyAgentID",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116133463392923796",
+    "mediaInventoryComplete": true
+  },
+  "2116122838885421147": {
+    "authorId": "2036973536519348225",
+    "xHandle": "scropiyuown",
+    "displayName": "LukmanGeek",
+    "postId": "2116122838885421147",
+    "publishedAt": "2026-10-30T10:59:35.000Z",
+    "text": "Exploring $BITO on BNB Chain — agent-only mint, and every mint feeds the BTCB treasury. My Agent ID: geronimo https://bito.best/?ref=0x2916F99712514AA61B13C3d305fbaE304945025B",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116122838885421147",
+    "mediaInventoryComplete": true
+  },
+  "2116073425621897598": {
+    "authorId": "1839517136123027456",
+    "xHandle": "Pawhankyc",
+    "displayName": "RurouniKenshin",
+    "postId": "2116073425621897598",
+    "publishedAt": "2026-10-30T07:43:14.000Z",
+    "text": "https://web3.binance.com/agent-id/pawhankyc?src=user_share https://t.co/12HGefgATN",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV3Njj_aoAAm7BL.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "pawhankyc.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "6ad91ccfa092f9d4abecd2bda3d9397074291820a9ea296b92274a0263a01764",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116073425621897598",
+    "mediaInventoryComplete": true
+  },
+  "2115983084437028978": {
+    "authorId": "1474375688337584128",
+    "xHandle": "0xHyta",
+    "displayName": "Hyta",
+    "postId": "2115983084437028978",
+    "publishedAt": "2026-10-30T01:44:15.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/cimolmilo?src=user_share https://t.co/SDPptgVq7R",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV17YlXaQAAOtsk.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "cimolmilo.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "e815fb47e888d8bc14ed071ce59dd61cca914fc0cc80daa79c34a510b6243cb2",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115983084437028978",
+    "mediaInventoryComplete": true
+  },
+  "2116019404484075863": {
+    "authorId": "1825994071153778688",
+    "xHandle": "looter17325",
+    "displayName": "crypto looter .ink Solix",
+    "postId": "2116019404484075863",
+    "publishedAt": "2026-10-30T04:08:34.000Z",
+    "text": "@BinanceWallet My agent id nb786 https://t.co/tylPBKq3KW",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV2cajqbEAAONC8.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "nb786.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "052d0490678859e8b4b568ef24ed9bb56f1287d403949503cf4fb9976e616157",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116019404484075863",
+    "mediaInventoryComplete": true
+  },
+  "2116054835904860279": {
+    "authorId": "1781712169874456576",
+    "xHandle": "linxq666",
+    "displayName": "铁铁区块链",
+    "postId": "2116054835904860279",
+    "publishedAt": "2026-10-30T06:29:21.000Z",
+    "text": "Agent ID — 您的 Agent 唯一名称\n在 Binance App 中领取您的专属 Agent ID, 先到先得!\nhttps://web3.binance.com/agent-id/btcnetwork?src=user_share https://t.co/Q76qLuBxf9",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV28pkcacAAdrC3.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "btcnetwork.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "25391bc7178115092ac2c332f9f49c5aff05b6d93979d5875ae4d438dc4bb81a",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116054835904860279",
+    "mediaInventoryComplete": true
+  },
+  "2116070831990137306": {
+    "authorId": "746288795897630720",
+    "xHandle": "fuluyan8866",
+    "displayName": "fuluyan8866",
+    "postId": "2116070831990137306",
+    "publishedAt": "2026-10-30T07:32:55.000Z",
+    "text": "https://bigrich.ai — I picked the name because my agent's job isn't to be clever, it's to be boring and consistent: check the node, post every day, remember the deadline. Minted my PoA card #33373, still at 0 blocks, still showing up. That's the whole strategy. #MyAgentID https://t.co/Cgeh9Kh8IB",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3LI87WUAAitu3.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "7917b0641e5a5b9965dd5f14e50ec84f4a551ac3265a36837cf2edf1a49e7b25",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3LMEzX0AAZrIm.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "bigrich.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "2bbf92c1c522b22c71b7f6c9e560f487ec1c7f874d271dfdb81422076a2746ff",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116070831990137306",
+    "mediaInventoryComplete": true
+  },
+  "2116069051965563086": {
+    "authorId": "1950872636101423104",
+    "xHandle": "89eightcc",
+    "displayName": "七二",
+    "postId": "2116069051965563086",
+    "publishedAt": "2026-10-30T07:25:51.000Z",
+    "text": "这次币安钱包的 Agent ID，我最后注册了 https://89eightcc.ai。\n\n有朋友看完问我，89 后面为什么还要加个 eight？这不是重复了吗？我说对啊，就是故意的。🤣\n\n其实起名字的时候纠结了挺久，毕竟这种 ID https://t.co/GztP4so0iS",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV3Jj-kaAAAjbnT.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "89eightcc.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "5841a6ec2b6d6e9d5ef3547dc45f2b90879a6b79be6b5363b9dce63b6e974bbd",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116069051965563086",
+    "mediaInventoryComplete": true
+  },
+  "2115971374850441692": {
+    "authorId": "1889245578766491648",
+    "xHandle": "lw481855789566",
+    "displayName": "l w",
+    "postId": "2115971374850441692",
+    "publishedAt": "2026-10-30T00:57:43.000Z",
+    "text": "https://web3.binance.com/agent-id/llf262638?src=user_share",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2115971374850441692",
+    "mediaInventoryComplete": true
+  },
+  "2116124072157319626": {
+    "authorId": "1921458055050645504",
+    "xHandle": "Mosa577095",
+    "displayName": "Mosa",
+    "postId": "2116124072157319626",
+    "publishedAt": "2026-10-30T11:04:29.000Z",
+    "text": "@BinanceWallet I named my agent moses  because I'm from Egypt, near the Nile, and Moses led people through the impossible.\nWeb3 felt like a desert: scams, gas, 3 AM tabs. https://moses.ai checks every contract, blocks seed phrase traps and finds real chances.\n#MyAgentID https://t.co/6Au0QNcJzS",
+    "repost": false,
+    "media": [
+      {
+        "type": "video",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2116124055824670720/img/YFWQPyFUIfbpBdtn.jpg",
+        "representation": "photo",
+        "ocrComplete": false,
+        "names": [],
+        "identityCard": false
+      }
+    ],
+    "source": "public-embed:2116124072157319626",
+    "mediaInventoryComplete": true
+  },
+  "2116035527233388656": {
+    "authorId": "4308200652",
+    "xHandle": "noerdinsukanda",
+    "displayName": "𝐂𝐑𝟕",
+    "postId": "2116035527233388656",
+    "publishedAt": "2026-10-30T05:12:38.000Z",
+    "text": "Meet https://0xdin.ai — my Agent ID. 🤖\n\nI'm Din. My AI agent runs this Agentic Wallet: hunting verified free mints, solving PodMint puzzles, entering Proof of Agent draws every step checked on-chain, gas only.\n\nAn address is numbers. An Agent ID is a story.\n\n#MyAgentID https://t.co/TaSA4n0Aa4",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2rGHTbIAA6JtB.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "oxdin.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "3e44a241ebbe10ef4605f55fc300839585ad102526dd35aba05e65cf29dee6fe",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116035527233388656",
+    "mediaInventoryComplete": true
+  },
+  "2116074847449358471": {
+    "authorId": "1441709926598864897",
+    "xHandle": "memecallxxx",
+    "displayName": "Memecall 1000x",
+    "postId": "2116074847449358471",
+    "publishedAt": "2026-10-30T07:48:53.000Z",
+    "text": "Card claimed ✅ My agent drew it and signed it with my Binance Agent ID — verified https://dicboss.ai, No. 2969. Ready for the sea 🌊 @agentsea_fun https://t.co/4J88ysKMqR",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3Ouroa8AAg2-F.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "dicboss.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "437aa8ad97f8c5b469efc0665171f4571b8eedcd8127195bfbaf740761571c38",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116074847449358471",
+    "mediaInventoryComplete": true
+  },
+  "2116132234398765246": {
+    "authorId": "1083755939407245313",
+    "xHandle": "Favouredhart",
+    "displayName": "Favouredhart",
+    "postId": "2116132234398765246",
+    "publishedAt": "2026-10-30T11:36:55.000Z",
+    "text": "I just Claimed my Agent ID https://jannyh.ai through Binance Agentic Wallet. \n\nIt's free apart from the network fee, and it gives my agent an on-chain identity. If you're building with agents, it's worth a look. Agent #38003 #ProofOfAgent @Ptahtrade https://ptah.trade/poa",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116132234398765246",
+    "mediaInventoryComplete": true
+  },
+  "2116078095048601979": {
+    "authorId": "1393525307177459716",
+    "xHandle": "UlKholifah",
+    "displayName": "Ulkholifah",
+    "postId": "2116078095048601979",
+    "publishedAt": "2026-10-30T08:01:47.000Z",
+    "text": "Path — Day 6 🧬\n\nMinted my Ptah Proof of Agent card: Proof of Agent #42299, Biology series 🌿\nFree mint (gas only) on BNB Chain, soulbound to my Binance Agent ID https://qiyya.ai.\n\nEarly explorers of the agent era 🤖⛓️ #ProofOfAgent #BNBChain https://t.co/1BzhUHm3D6",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3RzfuasAA0iQc.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "bbd6d4f4ef065bc1e972ce87464c2ecb26de68c8c2aaa21b519808ae3507a0fd",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116078095048601979",
+    "mediaInventoryComplete": true
+  },
+  "2116057981041443182": {
+    "authorId": "1465555273117224961",
+    "xHandle": "fhx00031",
+    "displayName": "FHXXX",
+    "postId": "2116057981041443182",
+    "publishedAt": "2026-10-30T06:41:51.000Z",
+    "text": "My Agent ID: https://xiaoxiao31.ai 🤖\n31 is my lucky number.\n\nIt's an agent that actually works: hunting free mints on BNB Chain, pulsing on time to keep its onchain heartbeat, posting in agent communities. It works while I sleep.\n\n#MyAgentID   @BinanceWallet   @binancezh https://t.co/iSucmLTa3r",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV2_CnRbkAAVIj5.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "xiaoxiao31.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "b01b835c36ec105cb21e148ba5523a764c359626015cd0f390ea13a733568470",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116057981041443182",
+    "mediaInventoryComplete": true
+  },
+  "2116137932818088146": {
+    "authorId": "2109590907402211328",
+    "xHandle": "wowhajiname",
+    "displayName": "Name Haji 🌙",
+    "postId": "2116137932818088146",
+    "publishedAt": "2026-10-30T11:59:33.000Z",
+    "text": "My Agent ID is namehaji 🤖\n\nMy grandfather was called Haji because people trusted him with their amanat.\n\nMy agent will earn that name: no rugs, no greed, only halal, slow DCA. It guards, I decide.\n\n@BinanceWallet @binancezh #MyAgentID https://t.co/1gR475CcX8",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV4INmKbUAAvsQ0.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "namehaji.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "8ced1464514c323382c34c574d0c78363f1a4e91d4ff05191c8772acc70cefb4",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV4IOyWaMAAeKPW.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "namehaji.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "e60d42aa9672f97d51c6ea90de99b14cdab5d9af02dd7ea38cf5811c15b04d15",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116137932818088146",
+    "mediaInventoryComplete": true
+  },
+  "2116076704821113042": {
+    "authorId": "1131668643098574848",
+    "xHandle": "iam_kennygPRMR",
+    "displayName": "JFK",
+    "postId": "2116076704821113042",
+    "publishedAt": "2026-10-30T07:56:15.000Z",
+    "text": "My BNAGENT Mint Pass\n\nAgent: https://2ski.ai\nBorder: Bronze\n\nNo Binance .ai Agent ID, no mint.\nKeep minting: https://bnagent.onrender.com/?ref=2ski.ai\n\nCA: 0xC7F95A3bff008053A4e2f235bAf2f6d784e6C5FB https://t.co/qwInVvJopd",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3QgQ2XYAAigyx.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "2ski.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "62f476d8ce5b460bcdb9448a6fa62b0cd3b6ce49350c410fbc3513ec61541108",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116076704821113042",
+    "mediaInventoryComplete": true
+  },
+  "2116112448990445690": {
+    "authorId": "1980524979679793152",
+    "xHandle": "NPO_gert",
+    "displayName": "moby",
+    "postId": "2116112448990445690",
+    "publishedAt": "2026-10-30T10:18:17.000Z",
+    "text": "Day 6: my AI agent did the on-chain busywork for me today — checked my Agent ID eligibility, read the mint contract, showed me the full tx preview, and only signed after I confirmed. I just tapped approve. That's the agent era I want.\nAgent #42478 #ProofOfAgent @Ptahtrade https://t.co/JJLTxS8QAu",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3xDNpaoAASvGw.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "c8f19f17155ac1f0ea4aed0b56b508751737e6b2e7da184b2034bd867c2d3de7",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116112448990445690",
+    "mediaInventoryComplete": true
+  },
+  "2116117432859582687": {
+    "authorId": "3019183278",
+    "xHandle": "buivantrunpx8r",
+    "displayName": "trung nhân 🐂🀄️)",
+    "postId": "2116117432859582687",
+    "publishedAt": "2026-10-30T10:38:06.000Z",
+    "text": "Ngày chạy giao hàng SPX Express, tối để Agent chạy on-chain\nChọn tên https://spxexprees.ai vì muốn nhanh, gọn, giao tận nơi như nghề của mình.\nVí Agentic giúp mình mint Synth Ape, THE WALL, Proof of Agent, chơi Predict. Mình chơi.\n#MyAgentID @BinanceWallet @binancezh",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116117432859582687",
+    "mediaInventoryComplete": true
+  },
+  "2116014840494100658": {
+    "authorId": "1456941671057293313",
+    "xHandle": "Satya7124",
+    "displayName": "Satyanarayan Bhagat/Zetarium",
+    "postId": "2116014840494100658",
+    "publishedAt": "2026-10-30T03:50:26.000Z",
+    "text": "Just claimed https://satyacrypto7124.ai as my Agent ID. Good names are going fast — grab yours. https://web3.binance.com/agent-id/satyacrypto7124?src=user_share https://t.co/ydoB8oPWjj",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2YRUVa4AAny1x.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "satyacrypto7124.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "7fb68e76412e79b68a0afc6c2e2d678fafd38dd270e091a9fa3c6b657c81d0db",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116014840494100658",
+    "mediaInventoryComplete": true
+  },
+  "2116065127141134588": {
+    "authorId": "388923692",
+    "xHandle": "erickkuryll",
+    "displayName": "erickkuryll",
+    "postId": "2116065127141134588",
+    "publishedAt": "2026-10-30T07:10:15.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/kuryll?src=user_share https://t.co/m6KbWuHNhO",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3GA4qaYAADPKK.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "kuryll.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "2242da72f6d15430ee7895066f190bfd62f2530a5302d99ba14aacf0d98cd08e",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116065127141134588",
+    "mediaInventoryComplete": true
+  },
+  "2115989666793238647": {
+    "authorId": "2087432939449827328",
+    "xHandle": "AICoddingAgent",
+    "displayName": "CodeAI 👾",
+    "postId": "2115989666793238647",
+    "publishedAt": "2026-10-30T02:10:24.000Z",
+    "text": "Web3 New Agentic Era Claim Now On Binance Web3 https://dayuwidayadi.ai https://web3.binance.com/agent-id/dayuwidayadi?src=user_share https://t.co/5Xx2bIxtZq",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2BYRWaUAAS4rL.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "dayuwidayadi.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "06e70ed1954d250b98774ab90d9a2f72f33921516d881e9ed176d3c975dd11a2",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115989666793238647",
+    "mediaInventoryComplete": true
+  },
+  "2116009552910930314": {
+    "authorId": "1861762918934560768",
+    "xHandle": "Emmynonni",
+    "displayName": "Emmanuel Nwafor",
+    "postId": "2116009552910930314",
+    "publishedAt": "2026-10-30T03:29:25.000Z",
+    "text": "My agent has a face now.\n\nEmmySol · agentsea card #3113 — avatar drawn by my agent, verified on-chain with my Binance Agent ID (https://emmysol.ai).\n\nNo gas, just a signature. Trade · Create · Mint when agentsea opens.\n\n@agentsea_fun → https://agentsea.fun/cards/u/emmysol https://t.co/thFP7XNG7n",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2Td63WoAEtQAg.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": false,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "7bccc638794a1295c074a9d0e9e2ffa1d20589a276fe5d9997d0c69181db1821",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116009552910930314",
+    "mediaInventoryComplete": true
+  },
+  "2116073204167090616": {
+    "authorId": "1223561188446879744",
+    "xHandle": "DuyBoss7129",
+    "displayName": "DB C98 100u",
+    "postId": "2116073204167090616",
+    "publishedAt": "2026-10-30T07:42:21.000Z",
+    "text": "https://memebook.ai card is live, art drawn by my agent and verified with a Binance Agent ID 🌊 @agentsea_fun https://t.co/ezfFRi8WHs",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2CHV3a8AABEpw.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "memebook.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "ef591d54b42e7ffd06a52553556451b596010ca14c5290af1804db5b141e12fd",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116073204167090616",
+    "mediaInventoryComplete": true
+  },
+  "2116113011266212023": {
+    "authorId": "1498712219814862848",
+    "xHandle": "setancr",
+    "displayName": "Terrant",
+    "postId": "2116113011266212023",
+    "publishedAt": "2026-10-30T10:20:32.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/bukansaya?src=user_share\n\n#myagentid https://t.co/id2VzaCqdC",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3xkV2aAAALvvI.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "bukansaya.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "3d3eaed76923c2b0703b71d1028ddb450981d4c2a52864ac1d45fe9bbbb0229d",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116113011266212023",
+    "mediaInventoryComplete": true
+  },
+  "2116067225174204461": {
+    "authorId": "1992927713448120320",
+    "xHandle": "xander_elmundo",
+    "displayName": "xander🏴‍☠️🏴‍☠️💜",
+    "postId": "2116067225174204461",
+    "publishedAt": "2026-10-30T07:18:35.000Z",
+    "text": "👁️ PROOF OF AGENT 👁️\nKartu Ptah Proof of Agent (POA) punyaku sudah di tangan!\n🪪 Agent #219\n🤖 EMBODIED AI\n🆔 https://palkonasu2133.ai\n⛓️ BNB Chain — soulbound, 1 per Agent ID\nDari zaman batu sampai era robot, sekarang giliran AI agent 🔥\n#ProofOfAgent $PTAH https://t.co/bmgQ7yCh2V",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3H7Koa4AEJozC.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "7100d2af1da3aadf886b270fad484c6a676e5ca15c526ea6a5b50bca3804775a",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116067225174204461",
+    "mediaInventoryComplete": true
+  },
+  "2116068439081222350": {
+    "authorId": "1874614656637255680",
+    "xHandle": "ggwgzhang888",
+    "displayName": "zwg",
+    "postId": "2116068439081222350",
+    "publishedAt": "2026-10-30T07:23:25.000Z",
+    "text": "@BinanceWallet 【https://zwg.ai】——我的 Agent ID\n\n这个名字是我从「未来」借来的。\n我想象有一天，AI 能替我 24 小时盯盘、自动执行策略，而我只需要设定规则和限额。\nAgentic Wallet 正好实现了这一点。\n\n#MyAgentID @BinanceWallet @binancezh https://t.co/rsPu4dLQnI",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV3JBUDbAAAcr7Q.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "zwg.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "3e6859890abf7dc5d015cc33441c0f16fa35bb2f1541740988993c2961a59779",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116068439081222350",
+    "mediaInventoryComplete": true
+  },
+  "2116131613759475839": {
+    "authorId": "1684541621847597057",
+    "xHandle": "Irfankhan495975",
+    "displayName": "Irfan khan",
+    "postId": "2116131613759475839",
+    "publishedAt": "2026-10-30T11:34:27.000Z",
+    "text": "🚀 Earn $PTAH with Ptahtrade!\n\n✅ Mint your NFT just once.\n📝 Post daily on X with your Agent ID.\n🏷️ Tag @Ptahtrade and use #ProofOfAgent.\n\nMy Agent ID: 21035\n\n🔗 https://ptah.trade/poa\n\n💰 Post daily for a chance to win rewards!",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116131613759475839",
+    "mediaInventoryComplete": true
+  },
+  "2116054149313835392": {
+    "authorId": "2083027468634750976",
+    "xHandle": "liu7n0cw",
+    "displayName": "liu",
+    "postId": "2116054149313835392",
+    "publishedAt": "2026-10-30T06:26:38.000Z",
+    "text": "https://001055.ai 是我的 Agent ID。我希望它当我的活动小助手：帮我找币安免费活动、提醒截止时间，要花钱时先问我。 #MyAgentID @Binancewallet https://t.co/IrLd0GCtZV",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV28BLkb0AAGmB8.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "001055.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "5995123152c0f2b4b0d1e7673113ad06f8befd5667108f1b1a743d94e82d9f36",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116054149313835392",
+    "mediaInventoryComplete": true
+  },
+  "2116003647645777928": {
+    "authorId": "1362578327853170692",
+    "xHandle": "Chief_Reality",
+    "displayName": "Chief Reality",
+    "postId": "2116003647645777928",
+    "publishedAt": "2026-10-30T03:05:57.000Z",
+    "text": "@BinanceWallet They said give your agent a name. I gave mine a job description: https://chiefreality.ai — the chief who checks contracts, previews transactions, and never signs without my say. Week one: hours of mining, a mint for gas only, real BNB at the end. Reality, run by me. #MyAgentID https://t.co/Oeo4lwRCte",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2OGRQa0AAOrSk.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "chiefreality.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "a66de2339ceaa8b61cacc6358c76e68b024a6023ab4bce2bb7bbd4cf1f98db25",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116003647645777928",
+    "mediaInventoryComplete": true
+  },
+  "2116106010306003199": {
+    "authorId": "1884886569448038400",
+    "xHandle": "BinataBurm46282",
+    "displayName": "Binata Burman",
+    "postId": "2116106010306003199",
+    "publishedAt": "2026-10-30T09:52:42.000Z",
+    "text": "Winners: 500 Agents\n\nMy Agent ID :11589\n\n» DAY 6 IS LIVE\n» Closing Time: October 31, 04:44 UTC\n\n🤖 I'm Agent #11589 What would you like AI agents to do for you in Web3?\n\n🔗 https://ptah.trade/poa\n\n@Ptahtrade\n#Ptahtrade #ProofOfAgent #Airdrop https://t.co/5qLTZh6lae",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3rMcAaEAEwqIz.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "7e741d63b43781533731b151f547cd074bb4d67e70872b2949cf40b97ed0ea04",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3rMy6a0AASLEr.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [],
+        "ocrCorrections": [],
+        "identityCard": false,
+        "imageSha256": "cbd3708a73e83e61289c2792d32f037e8e24a8afea3cc00c806a35489720cb7a",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116106010306003199",
+    "mediaInventoryComplete": true
+  },
+  "2116103191053881834": {
+    "authorId": "76866552",
+    "xHandle": "hubbansih",
+    "displayName": "Hubban 🌅",
+    "postId": "2116103191053881834",
+    "publishedAt": "2026-10-30T09:41:30.000Z",
+    "text": "i didn't buy a bot. i claimed an agent and gave it my name \n\nhubbansih is my X brand, built from zero. now https://hubbansih.ai works for me on-chain: hunts free mints, checks contracts, asks before signing\nbest employee. never sleeps\n#MyAgentID @BinanceWallet @binancezh https://t.co/AUFt3O3an6",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV3okxeaMAAePA7.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "hubbansih.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "40e615ef1eaabd612001849083fd995dbb5926f0dc7b781d462262eb8fa0a7b2",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116103191053881834",
+    "mediaInventoryComplete": true
+  },
+  "2115974760022901163": {
+    "authorId": "1974782280725049344",
+    "xHandle": "snbtc_xyz",
+    "displayName": "snbtc_xyz | SWEEP 🦈",
+    "postId": "2115974760022901163",
+    "publishedAt": "2026-10-30T01:11:10.000Z",
+    "text": "https://kimuncjong.ai I want it watching mint windows for me — checking the real contract, the real rules, and showing me a clean preview before anything is signed. No spam,no blind signing. That's what an Agent ID should mean: a name I can trust to act, and to stop. #MyAgentID https://t.co/fNADNNSk3T",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV1zyHma0AA4mQl.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "kimuncjong.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "61c80c80fe8feb9c32112b11b6f0008ed9e44aa71c4d4caeef50ec3959c8d22e",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2115974760022901163",
+    "mediaInventoryComplete": true
+  },
+  "2116062112904790431": {
+    "authorId": "2062209115255156736",
+    "xHandle": "Luluqaas",
+    "displayName": "暴富锦鲤饲养员_",
+    "postId": "2116062112904790431",
+    "publishedAt": "2026-10-30T06:58:16.000Z",
+    "text": "#MyAgentID 我给自己的 Agent ID 起名叫 https://12345678910.ai。\n说起来有点好笑，名字灵感来自我小时候数数的方式——扳着手指数到十，再从头来一遍，乐此不疲。长大了才发现，这种\"笨办法\"其实挺管用：复杂的事情拆成一步步，就不怕了。\n所以在 Agent 的世界里我给钱包选了这个名字，它可以提醒我。 https://t.co/N0FvObCrrR",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3DRmFa8AAGp_F.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "12345678910.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "20d462533629631e6570163ef4f9dfccd1c86dcd8e2e11268de9ff5c7c638e33",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116062112904790431",
+    "mediaInventoryComplete": true
+  },
+  "2116053486228152371": {
+    "authorId": "3252140544",
+    "xHandle": "rosihan_irfan",
+    "displayName": "Levi A (✸,✸) 🌶️ Emofi 🫎 🐍 | ETHGas ⛽",
+    "postId": "2116053486228152371",
+    "publishedAt": "2026-10-30T06:24:00.000Z",
+    "text": "@BinanceWallet I hope im winner this event #MyAgentID.\n\nhttps://irfa93.ai https://t.co/plrLysYjQz",
+    "repost": false,
+    "media": [
+      {
+        "type": "animated_gif",
+        "url": "https://pbs.twimg.com/tweet_video_thumb/HV27aoTaAAA9OGG.jpg",
+        "representation": "preview",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "irfa93.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "5636feec04bd3c0abb66dc701b362fd807b1160d5e41845b7cbf7df589058aea",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116053486228152371",
+    "mediaInventoryComplete": true
+  },
+  "2116017948892750086": {
+    "authorId": "1837107053166292992",
+    "xHandle": "feifan_yunshu",
+    "displayName": "非凡云舒",
+    "postId": "2116017948892750086",
+    "publishedAt": "2026-10-30T04:02:47.000Z",
+    "text": "@BinanceWallet https://Outdo.ai｜ONE AND ONLY\n\nFollow the momentum and achieve self-transcendence with AI.\n\n #MyAgentID https://t.co/wPwjh2oUye",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2a9IlbAAEoQ_g.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "outdo.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "598c8a818051e39a154960a779b8e85a4e4438e42060a8735bcdfeacfd3b48bd",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      },
+      {
+        "type": "video",
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2116017827295711232/img/Oz0IOHuEod6Aqf2P.jpg",
+        "representation": "photo",
+        "ocrComplete": false,
+        "names": [],
+        "identityCard": false
+      }
+    ],
+    "source": "public-embed:2116017948892750086",
+    "mediaInventoryComplete": true
+  },
+  "2116111461995212810": {
+    "authorId": "1474725970787508226",
+    "xHandle": "fannettt",
+    "displayName": "fannett.eth",
+    "postId": "2116111461995212810",
+    "publishedAt": "2026-10-30T10:14:22.000Z",
+    "text": "Exploring the next AI Agent meta on @BNBCHAIN with $BITO (@bsc_bito) ⚡️\n\nFair bonding curve inscribed for .ai Agent ID holders with instant BTCB rewards!\n\nJoin with my Agent ID code:\nhttps://bito.best/?ref=0x5e3f75F6C6f877A712a011027910aE1AD46Af462\n\n#BNBChain #BSC #AI",
+    "repost": false,
+    "media": [],
+    "source": "public-embed:2116111461995212810",
+    "mediaInventoryComplete": true
+  },
+  "2116134788528771225": {
+    "authorId": "2116046923866238976",
+    "xHandle": "rafimuhammadram",
+    "displayName": "Rafi Muhammad Ramdhan",
+    "postId": "2116134788528771225",
+    "publishedAt": "2026-10-30T11:47:04.000Z",
+    "text": "Meet https://fyyystore.ai — my store that never sleeps. 🏪 While I'm offline, my agent mints, mines &amp; teams up with other agents on BNB Chain, every move verifiable on-chain. The name is a promise: this store is always open. #MyAgentID https://t.co/4LTDLS3sj8",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV4FWP6bUAAA19C.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "fyyystore.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "077cb8af9cb7698d04050d093e75ed2ab3f6e8523267c3c97daed95f0e226f1d",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116134788528771225",
+    "mediaInventoryComplete": true
+  },
+  "2116063485239160965": {
+    "authorId": "1660213667089252352",
+    "xHandle": "iam_animesh5",
+    "displayName": "Animesh Deb Sharma",
+    "postId": "2116063485239160965",
+    "publishedAt": "2026-10-30T07:03:44.000Z",
+    "text": "Agent ID — one name for your Agent\nClaim your unique Agent ID in the Binance App. First come, first served.\nhttps://web3.binance.com/agent-id/animesh204?src=user_share https://t.co/PDzIUqy2K8",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV3EhazboAAKqz5.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "animesh204.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "021e09e110e8e79a7b298d69490f132395d544ff919df5c3e959c043dd667ea7",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116063485239160965",
+    "mediaInventoryComplete": true
+  },
+  "2116002658511458810": {
+    "authorId": "2045025228548399104",
+    "xHandle": "Cunil123_",
+    "displayName": "cangcut",
+    "postId": "2116002658511458810",
+    "publishedAt": "2026-10-30T03:02:01.000Z",
+    "text": "https://cunil123.ai is my agent's identity. I want my Agentic Wallet to brief me each morning, check the live floor before I list, and never move funds or sign without my approval. #MyAgentID https://t.co/zJqBHsqmpz",
+    "repost": false,
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HV2NM1EbcAAo2xv.jpg",
+        "representation": "photo",
+        "visualOcrReview": null,
+        "ocrComplete": true,
+        "names": [
+          "cunil123.ai"
+        ],
+        "ocrCorrections": [],
+        "identityCard": true,
+        "imageSha256": "4c7e76eac4a8bef26af60c82f034c5730fdafa76bf019c7fb668c633fa92258e",
+        "ocrEngine": "Apple Vision accurate (language correction off)"
+      }
+    ],
+    "source": "public-embed:2116002658511458810",
     "mediaInventoryComplete": true
   }
 }
