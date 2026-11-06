@@ -95,9 +95,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 7,
+    "tradeCount": 8,
     "buyCount": 6,
-    "sellCount": 1
+    "sellCount": 2
   },
   {
     "name": "q154321.ai",
@@ -155,9 +155,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 60,
-    "buyCount": 35,
-    "sellCount": 25
+    "tradeCount": 65,
+    "buyCount": 39,
+    "sellCount": 26
   },
   {
     "name": "ramensoup.ai",
@@ -735,9 +735,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 1,
+    "tradeCount": 2,
     "buyCount": 1,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "xbb888.ai",
@@ -755,9 +755,9 @@
     "source": "aipro",
     "chainVerified": true,
     "block": 129202618,
-    "tradeCount": 2,
+    "tradeCount": 3,
     "buyCount": 2,
-    "sellCount": 0
+    "sellCount": 1
   },
   {
     "name": "0xfelix.ai",
