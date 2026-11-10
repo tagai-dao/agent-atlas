@@ -115,9 +115,9 @@
     "source": "BSC ownerOf(name hash) · Grok source",
     "chainVerified": true,
     "block": 129783061,
-    "tradeCount": 5,
+    "tradeCount": 6,
     "buyCount": 3,
-    "sellCount": 2
+    "sellCount": 3
   },
   {
     "name": "nihao.ai",
